@@ -27,7 +27,7 @@
                  <tr>
                    <td> <font size="5" color="lightgreen"><b> <label>Identificación: </label> </b></font></td>
                     
-                   <td><input type="text" name="name" size="30" value="${customer.identification}"></td>
+                   <td><input type="text" name="identification" size="30" value="${customer.identification}"></td>
                 </tr>
                 <tr>
                    <td> <font size="5" color="lightgreen"><b> <label>Nombre: </label> </b></font></td>
@@ -54,8 +54,8 @@
                     <td><font size="5" color="lightgreen"><b> <label>Discapacidad: </label> </b></font></td>
                     <td>
                         <form action="">
-                    <input type="radio" name="disabilityPresented" value="${customer.disabilityPresented}"> Sí<br>
-                    <input type="radio" name="disabilityPresented" value="${customer.disabilityPresented}"> No<br>
+                            <input type="radio"  name="disabilityPresented" value="${customer.disabilityPresented}"> Sí<br>
+                    <input type="radio" name="disabilityPresented"  value="${customer.disabilityPresented}"> No<br>
                     
                 </form></td>
                 </tr>
