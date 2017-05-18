@@ -13,6 +13,7 @@
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/ClerkManagementServlet.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/ClerkData.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/main_menu.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Domain/VehicleType.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Domain/Customer.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/CustomerManagementServlet.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/AdministratorManagementServlet.java</file>
@@ -21,6 +22,7 @@
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/insert_clerk.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_all_clerks.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Business/CustomerBusiness.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/VehicleInfoServlet.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/VehicleData.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_all_administrators.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/UserData.java</file>

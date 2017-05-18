@@ -12,10 +12,9 @@ public class VehicleType {
     private byte numberOfTires; //# de llantas
     private float fee; //precio asignado
 
-    public VehicleType(int id, String description, byte numberOfTires, float fee) {
+    public VehicleType(int id, String description,float fee) {
         this.id = id;
         this.description = description;
-        this.numberOfTires = numberOfTires;
         this.fee = fee;
     }
 
@@ -36,14 +35,6 @@ public class VehicleType {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public byte getNumberOfTires() {
-        return numberOfTires;
-    }
-
-    public void setNumberOfTires(byte numberOfTires) {
-        this.numberOfTires = numberOfTires;
     }
 
     public float getFee() {

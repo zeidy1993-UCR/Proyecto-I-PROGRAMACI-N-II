@@ -59,7 +59,7 @@ public class ParkingLotData {
 
                         //compara el tipo de vehículo del espacio y del vehículo que se va a 
                         //estacionar (tipos: moto, automóvil, bus, etc)
-                        if (spaces[i].getVehicleType().getId() == vehicle.getVehiculeType().getId()) {
+                        if (spaces[i].getVehicleType().getId() == vehicle.getVehicleType().getId()) {
                             vehiclesInParkingLot.add(vehicle);
                             spaces[i].setSpaceTaken(true);
                             //este es el número del espacio que se va a retornar
@@ -74,7 +74,7 @@ public class ParkingLotData {
                     if (!spaces[i].isDisabilityAdaptation()) {
                         //compara el tipo de vehículo del espacio y del vehículo que se va a 
                         //estacionar (tipos: moto, automóvil, bus, etc)
-                        if (spaces[i].getVehicleType().getId() == vehicle.getVehiculeType().getId()) {
+                        if (spaces[i].getVehicleType().getId() == vehicle.getVehicleType().getId()) {
 
                             vehiclesInParkingLot.add(vehicle);
                             spaces[i].setSpaceTaken(true);
