@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/modify_customer.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/modify_administrator.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/ParkingLotData.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/insert_administrator.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_info_customer.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/CustomerData.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/AdministratorData.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/ClerkManagementServlet.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/ClerkData.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/main_menu.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Domain/Customer.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/CustomerManagementServlet.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/AdministratorManagementServlet.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/user_login.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_info_administrator.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/insert_clerk.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_all_clerks.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Business/CustomerBusiness.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/VehicleData.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_all_administrators.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/UserData.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_all_customers.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/CustomerRetrievalServlet.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/insert_customer.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/CustomerInfoServlet.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_info_clerk.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/modify_clerk.jsp</file>
+        </group>
+    </open-files>
+</project-private>
