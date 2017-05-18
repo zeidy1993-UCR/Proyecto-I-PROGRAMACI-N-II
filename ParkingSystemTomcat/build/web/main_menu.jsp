@@ -63,6 +63,20 @@
                     </font>
                 </td>
             </tr>
+                       <tr>
+                <td>
+                    <font size="5" color="white">
+                    7--> <a href="./insert_vehicle.jsp">Insertar vehiculo</a>
+                    </font>
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    <font size="5" color="white">
+                    8--> <a href="VehicleRetrievalServlet">Consultar vehiculos</a>
+                    </font>
+                </td>
+            </tr>
         </table>
     </body>
 </html>

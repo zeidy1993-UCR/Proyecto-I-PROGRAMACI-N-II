@@ -27,7 +27,7 @@ public class VehicleData {
 
     public VehicleData() {
         this.jsonFilePath
-                = "C:\\Users\\Usuario\\Documents\\Progra2\\ProyectoProgra1\\Proyecto I PROGRAMACIÓN II\\ParkingSystem\\vehicles.json";
+                = "C:\\Users\\Usuario\\Desktop\\Proyecto I PROGRAMACIÓN II\\ParkingSystemTomcat\\vehicles.json";
     }
 
     public void insertVehicles(Vehicle vehicle) throws IOException, org.json.simple.parser.ParseException, ParseException {

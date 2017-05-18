@@ -24,8 +24,8 @@
                     <td bgcolor="white" ><font size="5" color="#00009C"><b>Placa</b></font> </td>
                     <td bgcolor="white" ><font size="5" color="#00009C"><b>Marca</b></font> </td>
                     <td bgcolor="white" ><font size="5" color="#00009C"><b>Nombre del cliente</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Tipo de vehiculo</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Descricion del vehiculo</b></font> </td>
+                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Tipo de vehículo</b></font> </td>
+                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Descripción del vehículo</b></font> </td>
                     <td bgcolor="white" ><font size="5" color="#00009C"><b>Acción</b></font> </td>
 
 
