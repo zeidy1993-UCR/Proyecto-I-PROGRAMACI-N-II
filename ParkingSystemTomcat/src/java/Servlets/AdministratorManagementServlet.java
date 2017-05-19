@@ -6,9 +6,7 @@ package Servlets;
  * and open the template in the editor.
  */
 import Business.AdministratorBusiness;
-import Business.CustomerBusiness;
 import Domain.Administrator;
-import Domain.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -42,9 +40,8 @@ public class AdministratorManagementServlet extends HttpServlet {
     @Override
     public void init()
             throws ServletException {
-        
-        
-       administratorBusiness= new AdministratorBusiness();
+
+        administratorBusiness = new AdministratorBusiness();
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -75,14 +72,16 @@ public class AdministratorManagementServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       String action = request.getParameter("action");
+        String action = request.getParameter("action");
 
         if (action.equalsIgnoreCase("delete")) {
             try {
                 String administratorUsername = request.getParameter("administratorUsername");
                 administratorBusiness.deleteAdministrator(administratorUsername);
                 request.setAttribute("administrators", administratorBusiness.getAllAdministrators());
-            } catch (java.text.ParseException | org.json.simple.parser.ParseException ex) {
+            } catch (java.text.ParseException ex) {
+                Logger.getLogger(CustomerManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (org.json.simple.parser.ParseException ex) {
                 Logger.getLogger(CustomerManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("show_all_administrators.jsp");
@@ -95,12 +94,13 @@ public class AdministratorManagementServlet extends HttpServlet {
                 administrator = administratorBusiness.getAdministratorByUsername(administratorUsername);
 
                 request.setAttribute("administrator", administrator);
-               RequestDispatcher requestDispatcher = request.getRequestDispatcher("modify_administrator.jsp");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("modify_administrator.jsp");
                 requestDispatcher.forward(request, response);
-            } catch (java.text.ParseException | org.json.simple.parser.ParseException ex) {
+            } catch (java.text.ParseException ex) {
+                Logger.getLogger(CustomerManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (org.json.simple.parser.ParseException ex) {
                 Logger.getLogger(CustomerManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
-             
 
         }
 
@@ -119,21 +119,24 @@ public class AdministratorManagementServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             Administrator administrator;
-            String identification= request.getParameter("identification");
+            String identification = request.getParameter("identification");
             String name = request.getParameter("name");
             String email = request.getParameter("email");
             String phone = request.getParameter("phone");
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-            
+
             administrator = new Administrator(identification, name, email, phone, username, password);
-            
-            administratorBusiness.modifyAdministrator(username, administrator);
-            
-            
+
+           administratorBusiness.modifyAdministrator(username, administrator);
+
             request.setAttribute("administrators", administratorBusiness.getAllAdministrators());
-        } catch (ParseException | java.text.ParseException ex) {
-            Logger.getLogger(AdministratorManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("show_all_administrators.jsp");
+                requestDispatcher.forward(request, response);
+        } catch (ParseException ex) {
+            Logger.getLogger(CustomerManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (java.text.ParseException ex) {
+            Logger.getLogger(CustomerManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

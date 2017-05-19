@@ -5,12 +5,8 @@ package Servlets;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import Business.AdministratorBusiness;
 import Business.ClerkBusiness;
-import Business.CustomerBusiness;
-import Domain.Administrator;
 import Domain.Clerk;
-import Domain.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -80,7 +76,7 @@ public class ClerkManagementServlet extends HttpServlet {
 
         if (action.equalsIgnoreCase("delete")) {
             try {
-                String clerkUsername = request.getParameter("administratorUsername");
+                String clerkUsername = request.getParameter("clerkUsername");
                 clerkBusiness.deleteClerk(clerkUsername);
                 request.setAttribute("clerks", clerkBusiness.getAllClerks());
             } catch (java.text.ParseException | org.json.simple.parser.ParseException ex) {
@@ -90,9 +86,10 @@ public class ClerkManagementServlet extends HttpServlet {
             requestDispatcher.forward(request, response);
 
         } else if (action.equalsIgnoreCase("edit")) {
+            try {
             String clerkUsername = request.getParameter("clerkUsername");
             Clerk clerk;
-            try {
+            
                 clerk = clerkBusiness.getClerkByUsername(clerkUsername);
 
                 request.setAttribute("clerk", clerk);

@@ -54,10 +54,12 @@
                 <tr>
                     <td><font size="5" color="white"><b> <label>Discapacidad: </label> </b></font></td>
                     <td>
-                <form action="">
-                    <font color="white"><input type="radio"  name="disabilityPresented" value="true"> Sí<br></font>
-                     <font color="white"><input type="radio"  name="disabilityPresented" value="false"> No<br></font>
-                </form></td>
+                        <form id="myform">
+                            <input type="radio" name="disabilityPresented" id="disability_t" value="true">
+                                   <label for="disability_t">Sí</label><br/>
+                            <input type="radio" name="disabilityPresented" id="disability_f"  value="false">
+                                   <label for="disability_f">No</label><br/>
+                        </form></td>
                 </tr>
             </table>
             <input type="submit" value="Guardar cliente" />

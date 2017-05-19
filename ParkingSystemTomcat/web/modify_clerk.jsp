@@ -53,7 +53,7 @@
                 </tr>
                 <tr>
                     <td><font size="5" color="lightgreen"><b> <label>Lugar de Trabajo: </label> </b></font></td>
-                    <td><input type="text" name="password" size="30" value="${clerk.placeOfWork}"></td>
+                    <td><input type="text" name="placeOfWork" size="30" value="${clerk.placeOfWork}"></td>
                 </tr>
             </table>
             <input type="submit" value="Modificar empleado" />

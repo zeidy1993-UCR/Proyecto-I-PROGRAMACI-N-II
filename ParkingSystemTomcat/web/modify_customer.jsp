@@ -54,8 +54,8 @@
                     <td><font size="5" color="lightgreen"><b> <label>Discapacidad: </label> </b></font></td>
                     <td>
                         <form action="">
-                            <input type="radio"  name="disabilityPresented" value="${customer.disabilityPresented}"> Sí<br>
-                    <input type="radio" name="disabilityPresented"  value="${customer.disabilityPresented}"> No<br>
+                            <input type="radio"  name="disabilityPresented" value="${customer.disabilityPresented}" id="true"> Sí<br>
+                    <input type="radio" name="disabilityPresented"  value="${customer.disabilityPresented}" id="false"> No<br>
                     
                 </form></td>
                 </tr>

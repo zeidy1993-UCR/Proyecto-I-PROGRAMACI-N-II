@@ -285,7 +285,8 @@ public class ClerkData {
                     clerk.setPhone(jsonObject.get("phone").toString());
                     clerk.setUsername(jsonObject.get("username").toString());
                     clerk.setPassword(jsonObject.get("password").toString());
-                    clerk.setPlaceOfWork(jsonObject.get("placeOfWork").toString());
+                   String aux=(String)jsonObject.get("placeOfWork");
+                    clerk.setPlaceOfWork(aux);
                 }
 
             }

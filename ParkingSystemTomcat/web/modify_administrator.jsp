@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Modificar administrador</title>
     </head>
-    <body background="Images/fondo.jpg">
+    <body background="Images/background-image.gif">
         <i>
             <marquee <b><font color="lightgreen" size="8">Modificación de Administradores </font></b>
             </marquee>
@@ -27,29 +27,29 @@
                 <tr>
                    <td> <font size="5" color="lightgreen"><b> <label>Identificación: </label> </b></font></td>
                     
-                   <td><input type="text" name="identification" size="30" value="${administrador.identification}"></td>
+                   <td><input type="text" name="identification" size="30" value="${administrator.identification}"></td>
                 </tr>
                 
                 <tr>
                    <td> <font size="5" color="lightgreen"><b> <label>Nombre: </label> </b></font></td>
                     
-                   <td><input type="text" name="name" size="30" value="${administrador.name}"></td>
+                   <td><input type="text" name="name" size="30" value="${administrator.name}"></td>
                 </tr>
                 <tr>
                     <td><font size="5" color="lightgreen"><b> <label>Correo: </label> </b></font></td>
-                    <td><input type="text" name="email" size="30" value="${administrador.email}"></td>
+                    <td><input type="text" name="email" size="30" value="${administrator.email}"></td>
                 </tr>
                 <tr>
                    <td> <font size="5" color="lightgreen"><b> <label>Telefono: </label> </b></font></td>
-                    <td><input type="text" name="phone" size="30" value="${administrador.phone}"></td>
+                    <td><input type="text" name="phone" size="30" value="${administrator.phone}"></td>
                 </tr>
                 <tr>
                     <td><font size="5" color="lightgreen"><b> <label>Username: </label> </b></font></td>
-                    <td><input type="text" name="username" size="30" value="${administrador.username}"></td>
+                    <td><input type="text" name="username" size="30" value="${administrator.username}"></td>
                 </tr>
                 <tr>
                     <td><font size="5" color="lightgreen"><b> <label>Password: </label> </b></font></td>
-                    <td><input type="text" name="password" size="30" value="${administrador.password}"></td>
+                    <td><input type="text" name="password" size="30" value="${administrator.password}"></td>
                 </tr>
             </table>
             <input type="submit" value="Modificar Administrador" />
