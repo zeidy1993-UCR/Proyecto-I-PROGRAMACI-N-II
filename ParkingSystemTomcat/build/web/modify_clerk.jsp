@@ -27,7 +27,7 @@
                 <tr>
                     <td> <font size="5" color="lightgreen"><b> <label>Identificación: </label> </b></font></td>
 
-                    <td><input type="text" name="name" size="30" value="${clerk.identification}"></td>
+                    <td><input type="text" name="identification" size="30" value="${clerk.identification}"></td>
                 </tr>
 
                 <tr>

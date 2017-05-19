@@ -44,9 +44,8 @@ public class ClerkManagementServlet extends HttpServlet {
     @Override
     public void init()
             throws ServletException {
-        
-        
-       clerkBusiness= new ClerkBusiness();
+
+        clerkBusiness = new ClerkBusiness();
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -77,7 +76,7 @@ public class ClerkManagementServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       String action = request.getParameter("action");
+        String action = request.getParameter("action");
 
         if (action.equalsIgnoreCase("delete")) {
             try {
@@ -97,12 +96,11 @@ public class ClerkManagementServlet extends HttpServlet {
                 clerk = clerkBusiness.getClerkByUsername(clerkUsername);
 
                 request.setAttribute("clerk", clerk);
-               RequestDispatcher requestDispatcher = request.getRequestDispatcher("modify_clerk.jsp");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("modify_clerk.jsp");
                 requestDispatcher.forward(request, response);
             } catch (java.text.ParseException | org.json.simple.parser.ParseException ex) {
                 Logger.getLogger(CustomerManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
-             
 
         }
 
@@ -121,20 +119,20 @@ public class ClerkManagementServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             Clerk clerk;
-            String identification= request.getParameter("identification");
+            String identification = request.getParameter("identification");
             String name = request.getParameter("name");
             String email = request.getParameter("email");
             String phone = request.getParameter("phone");
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             String placeOfWork = request.getParameter("placeOfWork");
-            
-            clerk = new Clerk(identification, name, email, phone, username, password,placeOfWork);
-            
+
+            clerk = new Clerk(identification, name, email, phone, username, password, placeOfWork);
             clerkBusiness.modifyClerk(username, clerk);
-            
-            
             request.setAttribute("clerks", clerkBusiness.getAllClerks());
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("show_all_clerks.jsp");
+            requestDispatcher.forward(request, response);
+
         } catch (ParseException | java.text.ParseException ex) {
             Logger.getLogger(AdministratorManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
