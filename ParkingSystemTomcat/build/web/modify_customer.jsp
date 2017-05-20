@@ -18,48 +18,47 @@
             </marquee>
         </i>
     <center>
-         <font color="lightgreen">
+        <font color="lightgreen">
         <h2> Formulario de modificación de clientes </h2>
         </font>
         <form name="modifyCustomerForm" action="CustomerManagementServlet.do" method="post">
 
             <table align="center">
-                 <tr>
-                   <td> <font size="5" color="lightgreen"><b> <label>Identificación: </label> </b></font></td>
-                    
-                   <td><input type="text" name="identification" size="30" value="${customer.identification}"></td>
+                <tr>
+                    <td> <font size="5" color="lightgreen"><b> <label>Identificación: </label> </b></font></td>
+
+                    <td><input type="text" name="identification" size="30" value="${customer.identification}"></td>
                 </tr>
                 <tr>
-                   <td> <font size="5" color="lightgreen"><b> <label>Nombre: </label> </b></font></td>
-                    
-                   <td><input type="text" name="name" size="30" value="${customer.name}"></td>
+                    <td> <font size="5" color="lightgreen"><b> <label>Nombre: </label> </b></font></td>
+
+                    <td><input type="text" name="name" size="30" value="${customer.name}"></td>
                 </tr>
                 <tr>
                     <td><font size="5" color="lightgreen"><b> <label>Correo: </label> </b></font></td>
                     <td><input type="text" name="email" size="30" value="${customer.email}"></td>
                 </tr>
                 <tr>
-                   <td> <font size="5" color="lightgreen"><b> <label>Telefono: </label> </b></font></td>
+                    <td> <font size="5" color="lightgreen"><b> <label>Telefono: </label> </b></font></td>
                     <td><input type="text" name="phone" size="30" value="${customer.phone}"></td>
                 </tr>
-                <tr>
-                    <td><font size="5" color="lightgreen"><b> <label>Username: </label> </b></font></td>
-                    <td><input type="text" name="username" size="30" value="${customer.username}"></td>
-                </tr>
-                <tr>
-                    <td><font size="5" color="lightgreen"><b> <label>Password: </label> </b></font></td>
-                    <td><input type="text" name="password" size="30" value="${customer.password}"></td>
+
+                <td><font size="5" color="lightgreen"><b> <label>Password: </label> </b></font></td>
+                <td><input type="text" name="password" size="30" value="${customer.password}"></td>
                 </tr>
                 <tr>
                     <td><font size="5" color="lightgreen"><b> <label>Discapacidad: </label> </b></font></td>
                     <td>
                         <form action="">
-                            <input type="radio"  name="disabilityPresented" value="${customer.disabilityPresented}" id="true"> Sí<br>
-                    <input type="radio" name="disabilityPresented"  value="${customer.disabilityPresented}" id="false"> No<br>
-                    
-                </form></td>
+                            <font color="white"><input type="radio"  name="disabilityPresented" value="true"> Sí<br></font>
+                            <font color="white"><input type="radio"  name="disabilityPresented" value="false"> No<br></font>
+
+                        </form></td>
                 </tr>
-                
+                <tr>
+                    <td><input type=hidden name="username" size="30" value="${customer.username}"></td>
+                </tr>
+                <tr>
             </table>
             <input type="submit" value="Modificar cliente" />
             <input type="reset" value="Cancelar" />

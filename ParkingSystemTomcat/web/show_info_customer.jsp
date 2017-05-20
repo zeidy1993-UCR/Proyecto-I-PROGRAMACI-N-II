@@ -17,7 +17,10 @@
             String phone = request.getParameter("phone");
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-            boolean disabilityPresented = Boolean.parseBoolean(request.getParameter("disabilityPresented"));
+            String aux = request.getParameter("disabilityPresented");
+            boolean disabilityPresented = Boolean.parseBoolean(aux);
+
+
         %>
     </head>
     <body>
