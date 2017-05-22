@@ -42,7 +42,10 @@
                     <td> <font size="5" color="lightgreen"><b> <label>Telefono: </label> </b></font></td>
                     <td><input type="text" name="phone" size="30" value="${customer.phone}"></td>
                 </tr>
-
+                <tr>
+                    <td><font size="5" color="lightgreen"><b> <label>Username: </label> </b></font></td>
+                    <td><input disabled="" name="username" size="30" value="${customer.username}"></td>
+                </tr>
                 <td><font size="5" color="lightgreen"><b> <label>Password: </label> </b></font></td>
                 <td><input type="text" name="password" size="30" value="${customer.password}"></td>
                 </tr>
@@ -55,10 +58,6 @@
 
                         </form></td>
                 </tr>
-                <tr>
-                    <td><input type=hidden name="username" size="30" value="${customer.username}"></td>
-                </tr>
-                <tr>
             </table>
             <input type="submit" value="Modificar cliente" />
             <input type="reset" value="Cancelar" />

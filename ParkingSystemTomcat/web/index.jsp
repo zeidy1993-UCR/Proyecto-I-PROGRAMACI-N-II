@@ -7,52 +7,121 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<title>Web-Parkar</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<!-- Save for Web Slices (parqueo-Recuperado.psd) -->
-<table id="Tabla_01" align="center" width="1800" height="2000" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td colspan="4">
-			<img src="Images/index_01.jpg" width="1800" height="264" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="4">
-			<img src="Images/index_02.jpg" width="1800" height="80" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="4">
-			<img src="Images/index_03.jpg" width="1800" height="1314" alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="5">
-			<img src="Images/index_04.jpg" width="582" height="342" alt=""></td>
-		<td rowspan="5">
-			<img src="Images/index_05.jpg" width="626" height="342" alt=""></td>
-		<td colspan="2">
-			<img src="Images/index_06.jpg" width="592" height="82" alt=""></td>
-	</tr>
+    <head>
+        <title>webparkar</title>
+        <style type="text/css">
+
+            * {
+                margin:0px;
+                padding:0px;
+            }
+
+            #header {
+                margin:inherit;
+                width: 768px;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            ul, ol {
+                list-style:none;
+            }
+
+            .nav > li {
+                float:left;
+            }
+
+            .nav li a {
+                background-color:#000;
+                color:#fff;
+                text-decoration:none;
+                padding:10px 61px;
+                display:block;
+            }
+
+            .nav li a:hover {
+                background-color:#434343;
+            }
+
+            .nav li ul {
+                display:none;
+                position:absolute;
+                min-width:140px;
+            }
+
+            .nav li:hover > ul {
+                display:block;
+            }
+
+            .nav li ul li {
+                position:relative;
+            }
+
+            .nav li ul li ul {
+                right:-140px;
+                top:0px;
+            }
+
+        </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+   <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
+<!-- Save for Web Slices (webparkar.psd) -->
+<table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tr>
 		<td>
-			<img src="Images/index_07.jpg" width="1" height="83" alt=""></td>
+			<img src="Images/webparkar_01.jpg" width="164" height="105" alt=""></td>
 		<td>
-			<img src="Images/index_08.jpg" width="591" height="83" alt=""></td>
+			<img src="Images/webparkar_02.jpg" width="386" height="105" alt=""></td>
+		<td>
+			<img src="Images/webparkar_03.jpg" width="218" height="105" alt=""></td>
 	</tr>
-	<tr>
-		<td colspan="2">
-			<img src="Images/index_09.jpg" width="592" height="69" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<img src="Images/index_10.jpg" width="592" height="59" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<img src="Images/index_11.jpg" width="592" height="49" alt=""></td>
-	</tr>
-</table>
-<!-- End Save for Web Slices -->
-</body>
+            <tr>
+                <td colspan="3">
+                    <div id="header" align="center">
+                        <ul class="nav">
+                            <li><a href="./index.jsp">Inicio</a></li>
+                            <li><a href="">Configuración</a>
+                                <ul>
+                                    <li><a href="">Administrador</a>
+                                        <ul>
+                                            <li><a href="./insert_administrator.jsp">Insertar</a></li>
+                                            <li><a href="./show_all_administrators.jsp">Consultar</a></li>
+                                            <li><a href="./modify_administrator.jsp">Modificar</a></li>
+                                            <li><a href="./show_all_administrators.jsp">Eliminar</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="">Empleados</a>
+                                        <ul>
+                                            <li><a href="">Insertar</a></li>
+                                            <li><a href="">Consultar</a></li>
+                                            <li><a href="">Modificar</a></li>
+                                            <li><a href="">Eliminar</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="">Acerca de</a>
+                                <ul>
+                                    <li><a href="">Submenu1</a></li>
+                                    <li><a href="">Submenu2</a></li>
+                                    <li><a href="">Submenu3</a></li>
+                                    <li><a href="">Submenu4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Contacto</a></li>
+                        </ul>
+                    </div></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <img src="Images/webparkar_05.jpg" width="768" height="684" alt=""></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <img src="Images/webparkar_06.jpg" width="768" height="157" alt=""></td>
+            </tr>
+        </table>
+        <!-- End Save for Web Slices -->
+    </body>
 </html>
