@@ -144,7 +144,7 @@
                 </tr>
                 <tr>
                     <td><font size="5" color="15377d"><b> <label>Username: </label> </b></font></td>
-                    <td><input type="text" name="username" size="30" value="${administrator.username}"></td>
+                    <td><input disabled="" name="username" size="30" value="${administrator.username}"></td>
                 </tr>
                 <tr>
                     <td><font size="5" color="15377d"><b> <label>Password: </label> </b></font></td>

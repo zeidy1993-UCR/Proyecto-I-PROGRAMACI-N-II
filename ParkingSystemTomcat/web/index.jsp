@@ -93,7 +93,7 @@
                                             <li><a href="./insert_administrator.jsp">Insertar</a></li>
                                             <li><a href="AdministratorRetrievalServlet">Consultar</a>
                                              <ul>
-                                                <li><a href="AdministratorRetrievalServlet">Modifificar</a></li>
+                                                <li><a href="AdministratorRetrievalServlet">Modificar</a></li>
                                             <li><a href="AdministratorRetrievalServlet">Eliminar</a>
                                             </ul>
                                             </li>
@@ -113,15 +113,28 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="">Acerca de</a>
+                            <li><a href="">Parqueos</a>
                                 <ul>
-                                    <li><a href="">Submenu1</a></li>
-                                    <li><a href="">Submenu2</a></li>
-                                    <li><a href="">Submenu3</a></li>
-                                    <li><a href="">Submenu4</a></li>
-                                </ul>
+                                            <li><a href="">Insertar</a></li>
+                                            <li><a href="">Consultar</a>
+                                             <ul>
+                                                <li><a href="">Modificar</a></li>
+                                            <li><a href="">Eliminar</a>
+                                            </ul>
+                                            </li>
+                                        </ul>
                             </li>
-                            <li><a href="">Contacto</a></li>
+                            <li><a href="">Tarifas</a>
+                                <ul>
+                                            <li><a href="">Insertar</a></li>
+                                            <li><a href="">Consultar</a>
+                                             <ul>
+                                                <li><a href="">Modificar</a></li>
+                                            <li><a href="">Eliminar</a>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                              </li>
                         </ul>
                     </div></td>
             </tr>
