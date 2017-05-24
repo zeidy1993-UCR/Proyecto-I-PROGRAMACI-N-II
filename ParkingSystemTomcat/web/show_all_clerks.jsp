@@ -11,45 +11,53 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Listado de empleados</title>
     </head>
-    <body background="Images/fondo.jpgf">
-        <i>
-            <marquee <b><font color="lightgreen" size="8">Lista de Empleados en el Sistema </font></b>
-            </marquee>
-        </i>
-        <br><br><br>
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+        <!-- Save for Web Slices (jsp.psd) -->
     <center>
-        <table align="center" border="5">
+        <table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <img src="Images/jsp_01.jpg" width="768" height="105" alt=""></td>
+            </tr>
+            <tr>
+                <td>
             <center>
                 <table border="2">
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Identificación</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Nombre del cliente</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Correo electrónico</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Teléfono</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Usuario</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Lugar de Trabajo:</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Acción</b></font> </td>
 
+                        <td bgcolor="white" ><font size="4" color="#00009C"><b>Id</b></font> </td>
+                        <td bgcolor="white" ><font size="4" color="#00009C"><b>Nombre</b></font> </td>
+                        <td bgcolor="white" ><font size="4" color="#00009C"><b>Correo</b></font> </td>
+                        <td bgcolor="white" ><font size="4" color="#00009C"><b>Teléfono</b></font> </td>
+                        <td bgcolor="white" ><font size="4" color="#00009C"><b>Usuario</b></font> </td>
+                        <td bgcolor="white" ><font size="4" color="#00009C"><b>Lugar de Trabajo</b></font> </td>
+                        <td bgcolor="white" ><font size="4" color="#00009C"><b>Acción</b></font> </td>
 
                     <c:forEach items="${clerks}" var="currentClerk" varStatus="counter">
                         <c:set var="color" value="${counter.index%2==0? 'gray' : 'lightblue'}"/>
                         <tr bgcolor= "${color}">
-                            <td><font size="5"><c:out value="${currentClerk.identification}"/> </font> </td>
-                            <td><font size="5"><c:out value="${currentClerk.name}"/> </font> </td>
-                            <td><font size="5"><c:out value="${currentClerk.email}"/></font></td>
-                            <td><font size="5"><c:out value="${currentClerk.phone}"/></font></td>
-                            <td><font size="5"><c:out value="${currentClerk.username}"/></font></td>
-                            <td><font size="5"><c:out value="${currentClerk.placeOfWork}"/></font></td>
-                            <td><font size="5"><a
+                            <td><font size="3"><c:out value="${currentClerk.identification}"/> </font> </td>
+                            <td><font size="3"><c:out value="${currentClerk.name}"/> </font> </td>
+                            <td><font size="3"><c:out value="${currentClerk.email}"/></font></td>
+                            <td><font size="3"><c:out value="${currentClerk.phone}"/></font></td>
+                            <td><font size="3"><c:out value="${currentClerk.username}"/></font></td>
+                            <td><font size="3"><c:out value="${currentClerk.placeOfWork}"/></font></td>
+                            <td><font size="3"><a
                                     href="ClerkManagementServlet.do?action=edit&clerkUsername=<c:out
                                         value="${currentClerk.username}"/>">Modificar</a></font>
-                                <font size="5"><a
+                                <font size="3"><a
                                     href="ClerkManagementServlet.do?action=delete&clerkUsername=<c:out
                                         value="${currentClerk.username}"/>">Eliminar</a></font></td>
                         </tr>
                     </c:forEach>
                 </table>
             </center>
-            <a href="javascript:history.go(-1)">Página Anterior </a><br>
-            <a href="javascript:history.go(1)">Página Siguiente</a><br>
-            </body>
-            </html>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Images/jsp_04.jpg" width="768" height="157" alt=""></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
