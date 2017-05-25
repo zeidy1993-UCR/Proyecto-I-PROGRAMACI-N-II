@@ -1,9 +1,11 @@
 package Data;
 
 import Business.CustomerBusiness;
+import Business.VehicleBusiness;
 import Domain.Customer;
 import Domain.Vehicle;
 import Domain.VehicleType;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,25 +29,43 @@ public class VehicleData {
 
     public VehicleData() {
         this.jsonFilePath
-                = "C:\\Users\\Usuario\\Desktop\\Proyecto I PROGRAMACIÓN II\\ParkingSystemTomcat\\vehicles.json";
+                = "C:\\Users\\Usuario\\Documents\\Progra2\\ProyectoProgra1\\Protecto I PROGRAMACION II TOMCAT\\Proyecto I PROGRAMACIÓN II\\ParkingSystemTomcat\\vehicles.json";
     }
 
     public void insertVehicles(Vehicle vehicle) throws IOException, org.json.simple.parser.ParseException, ParseException {
         Customer customer = new Customer();
         CustomerBusiness customerBusiness = new CustomerBusiness();
+        VehicleType vehicleType = new VehicleType();
+        VehicleBusiness vehicleBusiness = new VehicleBusiness();
+
         JSONObject vehicleObject = new JSONObject();
-        vehicleObject.put("Placa", vehicle.getPlate());
-        vehicleObject.put("Marca", vehicle.getBrand());
-        //String identification, String name, String email, 
-        //String phone, String username, String password, boolean disabilityPresented
-        String customers = customerBusiness.getCustomerByUsername(vehicle.getCustomer().getUsername()).getIdentification() 
-                +customerBusiness.getCustomerByUsername(vehicle.getCustomer().getUsername()).getName() 
-                +customerBusiness.getCustomerByUsername(vehicle.getCustomer().getUsername()).getEmail() 
-                +customerBusiness.getCustomerByUsername(vehicle.getCustomer().getUsername()).getPhone()
-                + customerBusiness.getCustomerByUsername(vehicle.getCustomer().getUsername()).getUsername() 
-                + customerBusiness.getCustomerByUsername(vehicle.getCustomer().getUsername()).isDisabilityPresented();
-        vehicleObject.put("Cliente",customers );
-        vehicleObject.put("Tipo de Vehiculo", vehicle.getVehicleType());
+        vehicleObject.put("plate", vehicle.getPlate());
+        vehicleObject.put("brand", vehicle.getBrand());
+
+        Customer tempCustomer = vehicle.getCustomer()[0];
+        String firstCustomer = "Identificacion: " + tempCustomer.getIdentification() + " "
+                + "Nombre: " + tempCustomer.getName() + " - "
+                + "Email: " + tempCustomer.getEmail() + " - "
+                + "Numero: " + tempCustomer.getPhone() + " - "
+                + "Username: " + tempCustomer.getUsername() + " - "
+                + "Presenta Discapacidad: " + tempCustomer.isDisabilityPresented();
+        vehicleObject.put("firstCustomer", firstCustomer);
+
+        Customer tempSecondCustomer = vehicle.getCustomer()[1];
+        String secondCustomer = "Identificacion: " + tempSecondCustomer.getIdentification() + " "
+                + "Nombre: " + tempSecondCustomer.getName() + " - "
+                + "Email: " + tempSecondCustomer.getEmail() + " - "
+                + "Numero: " + tempSecondCustomer.getPhone() + " - "
+                + "Username: " + tempSecondCustomer.getUsername() + " - "
+                + "Presenta Discapacidad: " + tempSecondCustomer.isDisabilityPresented();
+
+        vehicleObject.put("secondCustomer", secondCustomer);
+
+        String typeVehicles = "Id: " + vehicle.getVehicleType().getId() + " - "
+                + "Descripcion: " + vehicle.getVehicleType().getDescription() + " - "
+                + "Precio: " + vehicle.getVehicleType().getFee();
+
+        vehicleObject.put("vehicleType", typeVehicles);
         //true allows multiple insertions in the file
         try (FileWriter file = new FileWriter(jsonFilePath, true)) {
             file.write(vehicleObject.toJSONString() + "\r\n");
@@ -68,10 +88,15 @@ public class VehicleData {
                 jsonObject = (JSONObject) new JSONParser().parse(line);
                 jsonArray.add(jsonObject);
                 Vehicle vehicle = new Vehicle();
-                vehicle.setPlate(jsonObject.get("plate").toString());
-                vehicle.setBrand(jsonObject.get("marca").toString());
-                CustomerBusiness customerBusiness = new CustomerBusiness();
-                vehicle.setCustomer((Customer) jsonObject.get("customer"));
+                String auxPlate = (String) jsonObject.get("plate");
+                vehicle.setPlate(auxPlate);
+                String auxBrand = (String) jsonObject.get("brand");
+                vehicle.setBrand(auxBrand);
+                Customer[] customer = new Customer[2];
+                customer[0] = (Customer) jsonObject.get("firstCustomer");
+                customer[1] = (Customer) jsonObject.get("secondCustomer");
+                vehicle.setCustomer(customer);
+                
                 vehicle.setVehicleType((VehicleType) jsonObject.get("vehicleType"));
 
                 System.out.println(vehicle.toString());
@@ -108,7 +133,10 @@ public class VehicleData {
                 //String plate,String brand,Customer customer, VehicleType vehicleType
                 vehicle.setPlate(jsonObject.get("plate").toString());
                 vehicle.setBrand(jsonObject.get("marca").toString());
-                vehicle.setCustomer((Customer) jsonObject.get("customer"));
+                Customer[] customers = new Customer[2];
+                customers[0] = (Customer) jsonObject.get("firstCustomer");
+                customers[1] = (Customer) jsonObject.get("secondCustomer");
+                vehicle.setCustomer(customers);
                 vehicle.setVehicleType((VehicleType) jsonObject.get("vehicleType"));
 
                 System.out.println(vehicle.toString());
@@ -148,7 +176,10 @@ public class VehicleData {
                 if (jsonObject.get("customer").equals(customer)) {
                     vehicle.setPlate(jsonObject.get("plate").toString());
                     vehicle.setBrand(jsonObject.get("marca").toString());
-                    vehicle.setCustomer((Customer) jsonObject.get("cutomer"));
+                    Customer[] customers = new Customer[2];
+                    customers[0] = (Customer) jsonObject.get("firstCustomer");
+                    customers[1] = (Customer) jsonObject.get("secondCustomer");
+                    vehicle.setCustomer(customers);
                     vehicle.setVehicleType((VehicleType) jsonObject.get("vehicleType"));
                     System.out.println(vehicle.toString());
                 }
@@ -244,8 +275,8 @@ public class VehicleData {
                 } else {
                     vehicleObject.put("plate", vehicle.getPlate());
                     vehicleObject.put("brand", vehicle.getBrand());
-                    vehicleObject.put("customer", vehicle.getCustomer());
-                    vehicleObject.put("vehicleType", vehicle.getVehicleType());
+                    vehicleObject.put("customer", vehicle.getCustomer().toString());
+                    vehicleObject.put("vehicleType", vehicle.getVehicleType().toString());
 
                     printWriter.println(vehicleObject.toJSONString());
                 }
@@ -287,7 +318,10 @@ public class VehicleData {
                 if (jsonObject.get("plate").equals(plate)) {
                     vehicle.setPlate(jsonObject.get("plate").toString());
                     vehicle.setBrand(jsonObject.get("marca").toString());
-                    vehicle.setCustomer((Customer) jsonObject.get("customer"));
+                    Customer[] customers = new Customer[2];
+                    customers[0] = (Customer) jsonObject.get("firstCustomer");
+                    customers[1] = (Customer) jsonObject.get("secondCustomer");
+                    vehicle.setCustomer(customers);
                     vehicle.setVehicleType((VehicleType) jsonObject.get("vehicleType"));
                     System.out.println(vehicle.toString());
                 }
@@ -303,4 +337,18 @@ public class VehicleData {
         }
         return vehicle;
     }//fin getVehicleByCustomer
+
+    public float fee(String id) {
+        float fee = 0;
+        if (id.equalsIgnoreCase("motocicleta")) {
+            fee = 500;
+        } else if (id.equalsIgnoreCase("automovil")) {
+            fee = 1000;
+        } else if (id.equalsIgnoreCase("microbus")) {
+            fee = 1500;
+        }
+
+        return fee;
+    }
+
 }

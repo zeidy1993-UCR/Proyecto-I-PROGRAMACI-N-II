@@ -16,12 +16,10 @@
 
         <%
 
-            CustomerBusiness customerBusiness = new CustomerBusiness();
-            //String identification, String name, String email, 
-            //String phone, String username, String password, boolean disabilityPresented
             String plate = request.getParameter("plate");
             String brand = request.getParameter("brand");
             String usernameCustomer = request.getParameter("username");
+            String usernameCustomer2 = request.getParameter("username2");
             String id = request.getParameter("id");
             String description = request.getParameter("description");
 
@@ -33,6 +31,7 @@
         Placa:<%=plate%><br>
         Marca: <%=brand%><br>
         Cliente: <%=usernameCustomer%><br>
+        Segundo Cliente: <%=usernameCustomer2%><br>
         Tipo de Vehiculo: <%=id%><br>
         Descripcion <%=description%><br>
 

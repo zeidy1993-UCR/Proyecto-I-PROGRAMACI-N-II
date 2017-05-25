@@ -8,16 +8,14 @@ package Domain;
 public class Vehicle {
 
     private String plate;
-    private String color;
     private String brand;
-    private String model;
-    private Customer customer;
+    private Customer [] customer;
     private VehicleType vehicleType;
 
     public Vehicle() {
     }
 
-    public Vehicle(String plate,String brand,Customer customer, VehicleType vehicleType) {
+    public Vehicle(String plate,String brand,Customer[] customer, VehicleType vehicleType) {
         this.plate = plate;
         this.brand = brand;
         this.customer = customer;
@@ -32,14 +30,6 @@ public class Vehicle {
         this.plate = plate;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public String getBrand() {
         return brand;
     }
@@ -48,19 +38,12 @@ public class Vehicle {
         this.brand = brand;
     }
 
-    public String getModel() {
-        return model;
-    }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public Customer getCustomer() {
+    public Customer[] getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(Customer[] customer) {
         this.customer = customer;
     }
 

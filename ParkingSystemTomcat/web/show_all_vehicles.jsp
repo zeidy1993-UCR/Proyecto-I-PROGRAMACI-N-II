@@ -25,7 +25,6 @@
                     <td bgcolor="white" ><font size="5" color="#00009C"><b>Marca</b></font> </td>
                     <td bgcolor="white" ><font size="5" color="#00009C"><b>Nombre del cliente</b></font> </td>
                     <td bgcolor="white" ><font size="5" color="#00009C"><b>Tipo de vehículo</b></font> </td>
-                    <td bgcolor="white" ><font size="5" color="#00009C"><b>Descripción del vehículo</b></font> </td>
                     <td bgcolor="white" ><font size="5" color="#00009C"><b>Acción</b></font> </td>
 
 
@@ -34,9 +33,8 @@
                         <tr bgcolor= "${color}">
                             <td><font size="5"><c:out value="${currentVehicle.plate}"/> </font> </td>
                             <td><font size="5"><c:out value="${currentVehicle.brand}"/> </font> </td>
-                            <td><font size="5"><c:out value="${currentVehicle.username}"/></font></td>
-                            <td><font size="5"><c:out value="${currentVehicle.id}"/></font></td>
-                            <td><font size="5"><c:out value="${currentVehicle.descripcion}"/></font></td>
+                            <td><font size="5"><c:out value="${currentVehicle.firstCustomer}"/></font></td>
+                            <td><font size="5"><c:out value="${currentVehicle.vehicleType}"/></font></td>
                             <td><font size="5"><a
                                     href="VehicleManagementServlet.do?action=edit&vehiclePlate=<c:out
                                         value="${currentVehicle.plate}"/>">Modificar</a></font>

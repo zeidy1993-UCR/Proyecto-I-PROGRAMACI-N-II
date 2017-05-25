@@ -62,20 +62,27 @@ public class VehicleInfoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        VehicleBusiness vehicleBusiness = new VehicleBusiness();
+            CustomerBusiness customerBusiness = new CustomerBusiness();
+            
         try {
 
             String plate = request.getParameter("plate");
             String brand = request.getParameter("brand");
             String usernameCustomer = request.getParameter("username");
-            //int id = Integer.parseInt(request.getParameter("id"));
+            String usernameCustomer2 = request.getParameter("username2");
+            String id = request.getParameter("id");
+            float fee = vehicleBusiness.fee(id);
             String description = request.getParameter("description");
-
-            VehicleBusiness vehicleBusiness = new VehicleBusiness();
-            CustomerBusiness customerBusiness = new CustomerBusiness();
-            Customer customer = customerBusiness.getCustomerByUsername(usernameCustomer);
+            
+            Customer customers [] = new Customer[2];
+            customers[0]= customerBusiness.getCustomerByUsername(usernameCustomer);
+            customers[1]= customerBusiness.getCustomerByUsername(usernameCustomer2);
+            
+            
 
             //here the insertion of Customer takes place
-            Vehicle vehicle = new Vehicle(plate, brand,customer ,new VehicleType(1, description, 500));
+            Vehicle vehicle = new Vehicle(plate, brand,customers ,new VehicleType(id, description, fee));
             vehicleBusiness.insertVehicle(vehicle);
 
             RequestDispatcher dispacher = request.getRequestDispatcher("show_info_vehicle.jsp");

@@ -82,9 +82,7 @@ public class VehicleManagementServlet extends HttpServlet {
                 String vehiclePlate = request.getParameter("plate");
                 vehicleBusiness.deleteVehicle(vehiclePlate);
                 request.setAttribute("vehicles", vehicleBusiness.getAllVehicles());
-            } catch (java.text.ParseException ex) {
-                Logger.getLogger(VehicleManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (org.json.simple.parser.ParseException ex) {
+            } catch (java.text.ParseException | org.json.simple.parser.ParseException ex) {
                 Logger.getLogger(VehicleManagementServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("show_all_vehicles.jsp");
@@ -125,13 +123,19 @@ public class VehicleManagementServlet extends HttpServlet {
             String plate = request.getParameter("plate");
             String brand = request.getParameter("brand");
             String usernameCustomer = request.getParameter("username");
+            String usernameCustomer2 = request.getParameter("username2");
             String vehicleType = request.getParameter("vehicleType");
             CustomerBusiness customerBusiness = new CustomerBusiness();
-            Customer customer = customerBusiness.getCustomerByUsername(usernameCustomer);
+            
+            Customer customers [] = new Customer[1];
+            customers[0]= customerBusiness.getCustomerByUsername(usernameCustomer);
+            customers[1]= customerBusiness.getCustomerByUsername(usernameCustomer);
+            
+           
+            ObjVehicleType = vehicleBusiness.getVehicleByCustomer(customers[1]).getVehicleType();
+            //here the insertion of Customer takes place
+           vehicle = new Vehicle(plate, brand,customers ,ObjVehicleType);
 
-            ObjVehicleType = vehicleBusiness.getVehicleByCustomer(customer).getVehicleType();
-
-            vehicle = new Vehicle(plate, brand, customer, ObjVehicleType);
 
             vehicleBusiness.modifyVehicle(plate, vehicle);
             request.setAttribute("vehicles", vehicleBusiness.getAllVehicles());

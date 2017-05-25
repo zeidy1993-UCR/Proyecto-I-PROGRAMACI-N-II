@@ -7,12 +7,12 @@ package Domain;
  */
 public class VehicleType {
     
-    private int id;
+    private String id;
     private String description;
     private byte numberOfTires; //# de llantas
     private float fee; //precio asignado
 
-    public VehicleType(int id, String description,float fee) {
+    public VehicleType(String id, String description,float fee) {
         this.id = id;
         this.description = description;
         this.fee = fee;
@@ -21,11 +21,11 @@ public class VehicleType {
     public VehicleType() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
