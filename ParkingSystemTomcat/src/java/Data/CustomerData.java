@@ -40,9 +40,9 @@ public class CustomerData {
         customerObject.put("phone", customer.getPhone());
         customerObject.put("username", customer.getUsername());
         customerObject.put("password", customer.getPassword());
-        String disabilityPresented = String.valueOf(customer.isDisabilityPresented());
-        customerObject.put("disabiltyPresented", disabilityPresented);
-        //true allows multiple insertions in the file
+        //String disabilityPresented = String.valueOf(customer.isDisabilityPresented());
+        customerObject.put("disabilityPresented", customer.isDisabilityPresented());
+        //true allows multiple insertions idisabiltyPresentedn the file
         try (FileWriter file = new FileWriter(jsonFilePath, true)) {
             file.write(customerObject.toJSONString() + "\r\n");
 
@@ -71,10 +71,8 @@ public class CustomerData {
                 customer.setPhone(jsonObject.get("phone").toString());
                 customer.setUsername(jsonObject.get("username").toString());
                 customer.setPassword(jsonObject.get("password").toString());
-                String aux = (String) jsonObject.get("disabilityPresented");
-                boolean disabilityPresented = Boolean.parseBoolean(aux);
-                customer.setDisabilityPresented(disabilityPresented);
-                System.out.println(customer.toString());
+                customer.setDisabilityPresented(Boolean.parseBoolean(jsonObject.get("disabilityPresented").toString()));
+                System.out.println("customersssssssssssssssssssssssssssssssssssssssss "+customer.toString());
                 customers.add(customer);
             }
             // Always close files.
@@ -111,9 +109,7 @@ public class CustomerData {
                 customer.setPhone(jsonObject.get("phone").toString());
                 customer.setUsername(jsonObject.get("username").toString());
                 customer.setPassword(jsonObject.get("password").toString());
-                String aux = (String) jsonObject.get("disabilityPresented");
-                boolean disabilityPresented = Boolean.parseBoolean(aux);
-                customer.setDisabilityPresented(disabilityPresented);
+                customer.setDisabilityPresented(Boolean.parseBoolean(jsonObject.get("disabilityPresented").toString()));
                 System.out.println(customer.toString());
                 customers.add(customer);
 
@@ -157,9 +153,7 @@ public class CustomerData {
                     customer.setPhone(jsonObject.get("phone").toString());
                     customer.setUsername(jsonObject.get("username").toString());
                     customer.setPassword(jsonObject.get("password").toString());
-                    String aux = (String) jsonObject.get("disabilityPresented");
-                    boolean disabilityPresented = Boolean.parseBoolean(aux);
-                    customer.setDisabilityPresented(disabilityPresented);
+                   customer.setDisabilityPresented(Boolean.parseBoolean(jsonObject.get("disabilityPresented").toString()));
                     System.out.println(customer.toString());
                 }
             }
@@ -258,7 +252,7 @@ public class CustomerData {
                     customerObject.put("phone", customer.getPhone());
                     customerObject.put("username", customer.getUsername());
                     customerObject.put("password", customer.getPassword());
-                    customerObject.put("disabiltyPresented", customer.isDisabilityPresented());
+                    customerObject.put("disabilityPresented", customer.isDisabilityPresented());
 
                     printWriter.println(customerObject.toJSONString());
                 }
@@ -312,9 +306,7 @@ public class CustomerData {
                     customer.setPhone(jsonObject.get("phone").toString());
                     customer.setUsername(jsonObject.get("username").toString());
                     customer.setPassword(jsonObject.get("password").toString());
-                    String aux = (String) jsonObject.get("disabilityPresented");
-                    boolean disabilityPresented = Boolean.parseBoolean(aux);
-                    customer.setDisabilityPresented(disabilityPresented);
+                    customer.setDisabilityPresented(Boolean.parseBoolean(jsonObject.get("disabilityPresented").toString()));
                 }
 
             }

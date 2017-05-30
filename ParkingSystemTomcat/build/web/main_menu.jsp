@@ -31,7 +31,7 @@
             <tr>
                 <td>
                     <font size="5" color="white">
-                    2--> <a href="CustomerRetrievalServlet">Consultar clientes</a>
+                    2--> <a href="HorarioRetrievalServlet">Consultar clientes</a>
                     </font>
                 </td>
             </tr>

@@ -36,11 +36,13 @@ public class Horario {
     public String getHorario() {
         String result = null;
         // Imprimimos el Map con un Iterador que ya hemos instanciado anteriormente
-        System.out.println("      HORARIO:   ");
+        System.out.println("      HORARIOsssss:   ");
         Iterator it = treeMap.keySet().iterator();
         while (it.hasNext()) {
             Integer key = (Integer) it.next();
             result += (treeMap.get(key)) + "\n";
+            
+                System.out.println("      result:   "+result);
         }
         return result;
     }

@@ -74,12 +74,12 @@
 	<tr>
                 <td>
                     <a href="./index.jsp">
-                        <img src="Images/webparkar_01.jpg" width="164" height="105" alt=""></a></td>
+                        <img src="Images/Index/webparkar_01.jpg" width="164" height="105" alt=""></a></td>
                 <td>
-                    <img src="Images/webparkar_02.jpg" width="386" height="105" alt=""></td>
+                    <img src="Images/Index/webparkar_02.jpg" width="386" height="105" alt=""></td>
                 <td>
-                    <a href="./user_login.jsp">
-                        <img src="Images/webparkar_03.jpg" width="218" height="105" alt=""></a></td>
+                    <a href="./customer_login.jsp">
+                        <img src="Images/Index/webparkar_03.jpg" width="218" height="105" alt=""></a></td>
             </tr>
             <tr>
                 <td colspan="3">
@@ -111,6 +111,19 @@
                                             </li>
                                         </ul>
                                     </li>
+                                    
+                                    <li><a href="">Clientes</a>
+                                        <ul>
+                                            <li><a href="./insert_customer.jsp">Insertar</a></li>
+                                            <li><a href="CustomerRetrievalServlet">Consultar</a>
+                                             <ul>
+                                                <li><a href="CustomerRetrievalServlet">Modifificar</a></li>
+                                            <li><a href="CustomerkRetrievalServlet">Eliminar</a>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
                                 </ul>
                             </li>
                             <li><a href="">Parqueos</a>
@@ -140,11 +153,15 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <img src="Images/webparkar_05.jpg" width="768" height="684" alt=""></td>
+                    <img src="Images/Index/webparkar_05.jpg" width="768" height="684" alt="">
+                    <a href="./administrator_login.jsp">Login Administrador</a><br>
+                    <a href="./clerk_login.jsp">Login Clerk</a><br>
+                </td>
             </tr>
+            
             <tr>
                 <td colspan="3">
-                    <img src="Images/webparkar_06.jpg" width="768" height="157" alt=""></td>
+                    <img src="Images/Index/webparkar_06.jpg" width="768" height="157" alt=""></td>
             </tr>
         </table>
         <!-- End Save for Web Slices -->

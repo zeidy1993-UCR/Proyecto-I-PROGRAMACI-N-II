@@ -68,7 +68,7 @@
 
         </style>
     </head>
-    
+
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
     <center>
         <table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0">
@@ -116,58 +116,61 @@
             </tr>
             <tr>
                 <td>
-                 <center>
-        <font color="15377d">
-        <h2> Formulario de modificación de clientes </h2>
-        </font>
-        <br><br>
-        <form name="modifyCustomerForm" action="CustomerManagementServlet.do" method="post">
+            <center>
+                <font color="15377d">
+                <h2> Formulario de modificación de clientes </h2>
+                </font>
+                <br><br>
+                <form name="modifyCustomerForm" action="CustomerManagementServlet.do" method="post">
 
-            <table align="center">
-                <tr>
-                    <td> <font size="5" color="15377d"><b> <label>Identificación: </label> </b></font></td>
+                    <table align="center">
+                        <tr>
+                            <td> <font size="5" color="15377d"><b> <label>Identificación: </label> </b></font></td>
 
-                    <td><input type="text" name="identification" size="30" value="${customer.identification}"></td>
-                </tr>
-                <tr>
-                    <td> <font size="5" color="15377d"><b> <label>Nombre: </label> </b></font></td>
+                            <td><input type="text" name="identification" size="30" value="${customer.identification}"></td>
+                        </tr>
+                        <tr>
+                            <td> <font size="5" color="15377d"><b> <label>Nombre: </label> </b></font></td>
 
-                    <td><input type="text" name="name" size="30" value="${customer.name}"></td>
-                </tr>
-                <tr>
-                    <td><font size="5" color="15377d"><b> <label>Correo: </label> </b></font></td>
-                    <td><input type="text" name="email" size="30" value="${customer.email}"></td>
-                </tr>
-                <tr>
-                    <td> <font size="5" color="15377d"><b> <label>Telefono: </label> </b></font></td>
-                    <td><input type="text" name="phone" size="30" value="${customer.phone}"></td>
-                </tr>
-                <tr>
-                    <td><font size="5" color="15377d"><b> <label>Username: </label> </b></font></td>
-                    <td><input disabled="" name="username" size="30" value="${customer.username}"></td>
-                </tr>
-                <td><font size="5" color="15377d"><b> <label>Password: </label> </b></font></td>
-                <td><input type="text" name="password" size="30" value="${customer.password}"></td>
-                </tr>
-                <tr>
-                    <td><font size="5" color="15377d"><b> <label>Discapacidad: </label> </b></font></td>
-                    <td>
-                        <form action="">
-                            <font color="15377d"><input type="radio"  name="disabilityPresented" value="true"> Sí<br></font>
-                            <font color="15377d"><input type="radio"  name="disabilityPresented" value="false"> No<br></font>
+                            <td><input type="text" name="name" size="30" value="${customer.name}"></td>
+                        </tr>
+                        <tr>
+                            <td><font size="5" color="15377d"><b> <label>Correo: </label> </b></font></td>
+                            <td><input type="text" name="email" size="30" value="${customer.email}"></td>
+                        </tr>
+                        <tr>
+                            <td> <font size="5" color="15377d"><b> <label>Telefono: </label> </b></font></td>
+                            <td><input type="text" name="phone" size="30" value="${customer.phone}"></td>
+                        </tr>
+                        <tr>
+                           <!--  <td><font size="5" color="15377d"><b> <label>Username: </label> </b></font></td>    -->
+                            <td><input type="hidden"  name="username" size="30" value="${customer.username}"></td>
+                        </tr>      
+                        <td><font size="5" color="15377d"><b> <label>Password: </label> </b></font></td>
+                        <td><input type="text" name="password" size="30" value="${customer.password}"></td>
+                        </tr>
+                        <tr>
+                            <td><font size="5" color="15377d"><b> <label>Discapacidad: </label> </b></font></td>
+                            <td>
+                                <form action="">
+                                    <font color="15377d"><input type="radio"  name="disabilityPresented" value="true"> Sí<br></font>
+                                    <font color="15377d"><input type="radio"  name="disabilityPresented" value="${customer.disabilityPresented}"> No<br></font>
 
-                        </form></td>
-                </tr>
-            </table>
-            <input type="submit" value="Modificar cliente" />
-            <input type="reset" value="Cancelar" />
-        </form>
-    </center>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="Images/jsp_04.jpg" width="768" height="157" alt=""></td>
-                </tr>
+                          <!--                   <font color="15377d"><input type="radio"  name="disabilityPresented" checked="${customer.disabilityPresented}" value="true"> Sí<br></font>
+                            <font color="15377d"><input type="radio"  name="disabilityPresented" checked="${customer.disabilityPresented}" value="false"> No<br></font>
+                                    -->
+                                </form></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Modificar cliente" />
+                    <input type="reset" value="Cancelar" />
+                </form>
+            </center>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Images/jsp_04.jpg" width="768" height="157" alt=""></td>
+            </tr>
         </table>
         <!-- End Save for Web Slices -->
     </center>

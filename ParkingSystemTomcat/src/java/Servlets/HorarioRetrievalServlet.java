@@ -67,6 +67,7 @@ public class HorarioRetrievalServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         horarios = horario.getHorario();
+        System.err.println("horariossssssssssssssssssssssssssssss "+horarios);
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("horario.jsp");
 

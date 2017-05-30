@@ -102,7 +102,7 @@ clerk= clerkBusiness.getClerkByUsernameAndPassword(username, password);
             System.out.println("name: " + clerk.getName());
             //verifica que se encontró el cliente y por ende, tiene un nombre
             if (!clerk.getName().equals("") && clerk.getUsername().equals(username)) {
-                RequestDispatcher dispacher = request.getRequestDispatcher("main_menu.jsp");
+                RequestDispatcher dispacher = request.getRequestDispatcher("main_menu_clerk.jsp");
                 response.setHeader("name", clerk.getName());
                 dispacher.forward(request, response);
             } else {

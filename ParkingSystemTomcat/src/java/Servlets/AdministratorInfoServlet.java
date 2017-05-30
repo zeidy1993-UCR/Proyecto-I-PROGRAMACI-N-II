@@ -98,7 +98,7 @@ String identification= request.getParameter("identification");
             administrator = administratorBusiness.getAdministratorByUsernameAndPassword(username, password);
             System.out.println("name: " + administrator.getName());
                        if (!administrator.getName().equals("")&&administrator.getUsername().equals(username)) {
-                RequestDispatcher dispacher = request.getRequestDispatcher("main_menu.jsp");
+                RequestDispatcher dispacher = request.getRequestDispatcher("main_menu_administrator.jsp");
                 response.setHeader("name", administrator.getName());
                 dispacher.forward(request, response);
             }else  {

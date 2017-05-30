@@ -143,8 +143,8 @@
                     <td><input type="text" name="phone" size="30" value="${clerk.phone}"></td>
                 </tr>
                 <tr>
-                    <td><font size="5" color="15377d"><b> <label>Username: </label> </b></font></td>
-                    <td><input disabled="" name="username" size="30" value="${clerk.username}"></td>
+                    <!--  <td><font size="5" color="15377d"><b> <label>Username: </label> </b></font></td>-->
+                    <td><input type="hidden" name="username" size="30" value="${clerk.username}"></td>
                 </tr>
                 <tr>
                     <td><font size="5" color="15377d"><b> <label>Password: </label> </b></font></td>

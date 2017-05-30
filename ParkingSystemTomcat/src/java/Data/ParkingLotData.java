@@ -53,7 +53,7 @@ public class ParkingLotData {
 
                 //preguntamos si el cliente presenta una capacidad particular
                 //y requiere de un espacio adaptado
-                if (vehicle.getCustomer().isDisabilityPresented()) {
+                if (vehicle.getCustomer()[i].isDisabilityPresented()) {
 
                     if (spaces[i].isDisabilityAdaptation()) {
 
