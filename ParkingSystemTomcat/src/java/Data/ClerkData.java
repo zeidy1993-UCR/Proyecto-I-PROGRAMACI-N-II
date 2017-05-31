@@ -74,50 +74,6 @@ public class ClerkData {
         return clerks;
     }
 
-    public boolean clerkSearch(String username, String password) throws org.json.simple.parser.ParseException {
-        boolean find = false;
-        LinkedList<Clerk> clerks = new LinkedList<>();
-        ArrayList<JSONObject> jsonArray = new ArrayList<>();
-        JSONObject jsonObject = null;
-        // This will reference one line at a time
-        String line = null;
-        Clerk clerk = new Clerk();
-        try {
-            FileReader fileReader = new FileReader(jsonFilePath);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            while ((line = bufferedReader.readLine()) != null) {
-                jsonObject = (JSONObject) new JSONParser().parse(line);
-                jsonArray.add(jsonObject);
-                clerk.setIdentification(jsonObject.get("identification").toString());
-                clerk.setName(jsonObject.get("name").toString());
-                clerk.setEmail(jsonObject.get("email").toString());
-                clerk.setPhone(jsonObject.get("phone").toString());
-                clerk.setUsername(jsonObject.get("username").toString());
-                clerk.setPassword(jsonObject.get("password").toString());
-                clerk.setPlaceOfWork(jsonObject.get("placeOfWork").toString());
-                System.out.println(clerk.toString());
-                clerks.add(clerk);
-
-            }
-            for (int i = 0; i < clerks.size(); i++) {
-                if (username.equalsIgnoreCase(jsonObject.get("username").toString())
-                        || password.equalsIgnoreCase(jsonObject.get("password").toString())) {
-                    find = true;
-                }
-            }
-            System.out.println(clerk.getUsername() + "" + clerk.getPassword());
-            // Always close files.
-            bufferedReader.close();
-        } catch (FileNotFoundException ex) {
-            System.out.println("Unable to open file '" + jsonFilePath + "'");
-        } catch (IOException ex) {
-            System.out.println("Error reading file '" + jsonFilePath + "'");
-            // Or we could just do this:
-            // ex.printStackTrace();
-        }
-        return find;
-    }//fin customerSearch
-
     public Clerk getClerkByUsernameAndPassword(String username, String password) throws ParseException, org.json.simple.parser.ParseException {
         Clerk clerk = new Clerk();
         JSONObject jsonObject;

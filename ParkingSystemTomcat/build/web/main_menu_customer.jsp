@@ -7,10 +7,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>jsp</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <style type="text/css">
+<head>
+<title>Menú Principal Cliente</title>
+ <style type="text/css">
 
             * {
                 margin:0px;
@@ -49,7 +48,7 @@
             .nav li ul {
                 display:none;
                 position:absolute;
-                min-width:140px;
+                min-width:180px;
             }
 
             .nav li:hover > ul {
@@ -61,26 +60,27 @@
             }
 
             .nav li ul li ul {
-                right:-140px;
+                right:-180px;
                 top:0px;
             }
 
         </style>
-    </head>
-    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-        <!-- Save for Web Slices (jsp.psd) -->
-    <center>
-        <table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td>
-                    <a href="./index.jsp">
-                    <img src="Images/JSP/jsp_01.jpg" width="164" height="105" alt=""></td>
-                <td>
-                    <img src="Images/JSP/jsp_02.jpg" width="604" height="105" alt=""></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div id="header">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- Save for Web Slices (jsp.psd) -->
+<center>
+<table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <a href="./main_menu_customer.jsp">
+                <img src="Images/JSP/jsp_01.jpg" width="164" height="105" alt=""></a></td>
+        <td>
+            <img src="Images/JSP/jsp_02.jpg" width="604" height="105" alt=""></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+             <div id="header">
                         <ul class="nav">
                             <li><a href="./index.jsp">Inicio</a></li>
                             <li><a href="">Configuración</a>
@@ -108,18 +108,19 @@
                             </li>
                             <li><a href="">Horario</a></li>
                         </ul>
-                    </div></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <img src="Images/JSP/jsp_04.jpg" width="768" height="684" alt=""></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <img src="Images/JSP/jsp_05.jpg" width="768" height="157" alt=""></td>
-            </tr>
-        </table>
-    </center>
-    <!-- End Save for Web Slices -->
+                    </div>
+            </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img src="Images/JSP/jsp_04.jpg" width="768" height="684" alt=""></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img src="Images/JSP/jsp_05.jpg" width="768" height="157" alt=""></td>
+    </tr>
+</table>
+</center>
+<!-- End Save for Web Slices -->
 </body>
 </html>

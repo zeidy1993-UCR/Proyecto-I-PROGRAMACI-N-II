@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>webparkar</title>
+        <title>Web Park Car</title>
         <style type="text/css">
 
             * {
@@ -21,9 +21,9 @@
                 width: 768px;
                 font-family:Arial, Helvetica, sans-serif;
                 position: absolute;
-		top: 105px;
-                
-		
+                top: 105px;
+
+
             }
 
             ul, ol {
@@ -38,7 +38,7 @@
                 background-color:#000;
                 color:#fff;
                 text-decoration:none;
-                padding:10px 61px;
+                padding:10px 70px;
                 display:block;
             }
 
@@ -49,7 +49,7 @@
             .nav li ul {
                 display:none;
                 position:absolute;
-                min-width:140px;
+                min-width:200px;
             }
 
             .nav li:hover > ul {
@@ -61,17 +61,17 @@
             }
 
             .nav li ul li ul {
-                right:-140px;
+                right:-200px;
                 top:0px;
             }
 
         </style>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>
-   <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
-<!-- Save for Web Slices (webparkar.psd) -->
-<table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0" align="center">
-	<tr>
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
+        <!-- Save for Web Slices (webparkar.psd) -->
+        <table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
                 <td>
                     <a href="./index.jsp">
                         <img src="Images/Index/webparkar_01.jpg" width="164" height="105" alt=""></a></td>
@@ -86,68 +86,21 @@
                     <div id="header" align="center">
                         <ul class="nav">
                             <li><a href="./index.jsp">Inicio</a></li>
-                            <li><a href="">Configuración</a>
-                                <ul>
-                                    <li><a href="">Administrador</a>
-                                        <ul>
-                                            <li><a href="./insert_administrator.jsp">Insertar</a></li>
-                                            <li><a href="AdministratorRetrievalServlet">Consultar</a>
-                                             <ul>
-                                                <li><a href="AdministratorRetrievalServlet">Modificar</a></li>
-                                            <li><a href="AdministratorRetrievalServlet">Eliminar</a>
-                                            </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="">Empleados</a>
-                                        <ul>
-                                            <li><a href="./insert_clerk.jsp">Insertar</a></li>
-                                            <li><a href="ClerkRetrievalServlet">Consultar</a>
-                                             <ul>
-                                                <li><a href="ClerkRetrievalServlet">Modifificar</a></li>
-                                            <li><a href="ClerkRetrievalServlet">Eliminar</a>
-                                            </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li><a href="">Clientes</a>
-                                        <ul>
-                                            <li><a href="./insert_customer.jsp">Insertar</a></li>
-                                            <li><a href="CustomerRetrievalServlet">Consultar</a>
-                                             <ul>
-                                                <li><a href="CustomerRetrievalServlet">Modifificar</a></li>
-                                            <li><a href="CustomerkRetrievalServlet">Eliminar</a>
-                                            </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                </ul>
-                            </li>
                             <li><a href="">Parqueos</a>
                                 <ul>
-                                            <li><a href="">Insertar</a></li>
-                                            <li><a href="">Consultar</a>
-                                             <ul>
-                                                <li><a href="">Modificar</a></li>
-                                            <li><a href="">Eliminar</a>
-                                            </ul>
-                                            </li>
-                                        </ul>
+
+                                    <li><a href="">Consultar</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li><a href="">Tarifas</a>
                                 <ul>
-                                            <li><a href="">Insertar</a></li>
-                                            <li><a href="">Consultar</a>
-                                             <ul>
-                                                <li><a href="">Modificar</a></li>
-                                            <li><a href="">Eliminar</a>
-                                            </ul>
-                                            </li>
-                                        </ul>
-                              </li>
+                                    <li><a href="">Consultar</a>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="./Schedule.jsp">Horario</a></li>
                         </ul>
                     </div></td>
             </tr>
@@ -158,7 +111,7 @@
                     <a href="./clerk_login.jsp">Login Clerk</a><br>
                 </td>
             </tr>
-            
+
             <tr>
                 <td colspan="3">
                     <img src="Images/Index/webparkar_06.jpg" width="768" height="157" alt=""></td>

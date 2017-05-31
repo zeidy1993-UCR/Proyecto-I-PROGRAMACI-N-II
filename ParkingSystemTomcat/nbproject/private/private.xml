@@ -8,16 +8,21 @@
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/ClerkInfoServlet.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/index.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Business/CustomerBusiness.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/customer_login.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Data/CustomerData.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/modify_vehicle.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/show_all_customers.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/clerk_login.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/main_menu_customer.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/main_menu.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/main_menu_administrator.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/CustomerRetrievalServlet.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/insert_customer.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/CustomerManagementServlet.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/src/java/Servlets/CustomerInfoServlet.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/administrator_login.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/main_menu_clerk.jsp</file>
             <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/modify_clerk.jsp</file>
-            <file>file:/C:/Users/Usuario/Desktop/Proyecto%20I%20PROGRAMACIÓN%20II/ParkingSystemTomcat/web/user_login.jsp</file>
         </group>
     </open-files>
 </project-private>

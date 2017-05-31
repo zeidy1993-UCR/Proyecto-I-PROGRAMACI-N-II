@@ -100,7 +100,7 @@ public class CustomerInfoServlet extends HttpServlet {
             System.out.println("name: " + customer.getName());
             //verifica que se encontró el cliente y por ende, tiene un nombre
             if (!customer.getName().equals("")) {
-                RequestDispatcher dispacher = request.getRequestDispatcher("main_menu.jsp");
+                RequestDispatcher dispacher = request.getRequestDispatcher("main_menu_customer.jsp");
                 response.setHeader("name", customer.getName());
                 dispacher.forward(request, response);
             }

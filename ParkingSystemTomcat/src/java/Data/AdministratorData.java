@@ -70,49 +70,6 @@ public class AdministratorData {
         return administrators;
     }
 
-    public boolean administratorSearch(String username, String password) throws org.json.simple.parser.ParseException {
-        boolean find = false;
-        LinkedList<Administrator> administrators = new LinkedList<>();
-        ArrayList<JSONObject> jsonArray = new ArrayList<>();
-        JSONObject jsonObject = null;
-        // This will reference one line at a time
-        String line = null;
-        Administrator administrator = new Administrator();
-        try {
-            FileReader fileReader = new FileReader(jsonFilePath);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            while ((line = bufferedReader.readLine()) != null) {
-                jsonObject = (JSONObject) new JSONParser().parse(line);
-                jsonArray.add(jsonObject);
-                administrator.setIdentification(jsonObject.get("identification").toString());
-                administrator.setName(jsonObject.get("name").toString());
-                administrator.setEmail(jsonObject.get("email").toString());
-                administrator.setPhone(jsonObject.get("phone").toString());
-                administrator.setUsername(jsonObject.get("username").toString());
-                administrator.setPassword(jsonObject.get("password").toString());
-                System.out.println(administrator.toString());
-                administrators.add(administrator);
-
-            }
-            for (int i = 0; i < administrators.size(); i++) {
-                if (username.equalsIgnoreCase(jsonObject.get("username").toString())
-                        || password.equalsIgnoreCase(jsonObject.get("password").toString())) {
-                    find = true;
-                }
-            }
-            System.out.println(administrator.getUsername() + "" + administrator.getPassword());
-            // Always close files.
-            bufferedReader.close();
-        } catch (FileNotFoundException ex) {
-            System.out.println("Unable to open file '" + jsonFilePath + "'");
-        } catch (IOException ex) {
-            System.out.println("Error reading file '" + jsonFilePath + "'");
-            // Or we could just do this:
-            // ex.printStackTrace();
-        }
-        return find;
-    }//fin customerSearch
-
     public Administrator getAdministratorByUsernameAndPassword(String username, String password) throws ParseException, org.json.simple.parser.ParseException {
         Administrator administrator = new Administrator();
         JSONObject jsonObject;

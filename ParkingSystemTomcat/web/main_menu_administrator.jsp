@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Menú Principal Administrador</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style type="text/css">
 
@@ -48,7 +49,7 @@
             .nav li ul {
                 display:none;
                 position:absolute;
-                min-width:140px;
+                min-width:180px;
             }
 
             .nav li:hover > ul {
@@ -60,7 +61,7 @@
             }
 
             .nav li ul li ul {
-                right:-140px;
+                right:-180px;
                 top:0px;
             }
 
@@ -72,8 +73,8 @@
         <table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                    <a href="./index.jsp">
-                        <img src="Images/JSP/jsp_01.jpg" width="164" height="105" alt=""></td>
+                   <a href="./main_menu_administrator.jsp">
+                       <img src="Images/JSP/jsp_01.jpg" width="164" height="105" alt=""></a></td>
                         <td>
                             <img src="Images/JSP/jsp_02.jpg" width="604" height="105" alt=""></td>
             </tr>
@@ -83,7 +84,7 @@
                         <ul class="nav">
                             <li><a href="">Configuración</a>
                                 <ul>
-                                    <li><a href="">Administradores</a>
+                                    <li><a href="./main_menu_administrator.jsp">Administradores</a>
                                         <ul>
                                             <li><a href="./insert_administrator.jsp">Insertar</a></li>
                                             <li><a href="AdministratorRetrievalServlet">Consultar</a>

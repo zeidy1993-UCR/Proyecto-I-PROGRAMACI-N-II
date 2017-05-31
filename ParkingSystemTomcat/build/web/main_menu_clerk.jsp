@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Menú Principal Empleado</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style type="text/css">
 
@@ -72,8 +73,8 @@
         <table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                    <a href="./index.jsp">
-                        <img src="Images/JSP/jsp_01.jpg" width="164" height="105" alt=""></td>
+                    <a href="./main_menu_clerk.jsp">
+                        <img src="Images/JSP/jsp_01.jpg" width="164" height="105" alt=""></a></td>
                         <td>
                             <img src="Images/JSP/jsp_02.jpg" width="604" height="105" alt=""></td>
             </tr>

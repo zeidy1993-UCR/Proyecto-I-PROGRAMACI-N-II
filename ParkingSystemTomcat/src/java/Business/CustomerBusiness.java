@@ -63,7 +63,6 @@ public class CustomerBusiness {
         return customer;
     }
 
-    
     public Customer getCustomerByName(String username) throws ParseException, org.json.simple.parser.ParseException {
 
         Customer customer = new Customer();
