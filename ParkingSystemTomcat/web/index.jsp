@@ -100,13 +100,13 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="./Schedule.jsp">Horario</a></li>
+                            <li><a href="ScheduleRetrievalServlet">Horario</a></li>
                         </ul>
                     </div></td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <img src="Images/Index/webparkar_05.jpg" width="768" height="684" alt="">
+                    <img src="Images/Index/webparkar_05_1.jpg" width="768" height="684" alt="">
                     <a href="./administrator_login.jsp">Login Administrador</a><br>
                     <a href="./clerk_login.jsp">Login Clerk</a><br>
                 </td>

@@ -69,5 +69,9 @@ public class CustomerBusiness {
         customer = customerData.getCustomerByUsername(username);
         return customer;
     }
+    
+    public boolean customerSearch(String username, String password) throws org.json.simple.parser.ParseException {
+        return customerData.customerSearch(username, password);
+    }
 
 }

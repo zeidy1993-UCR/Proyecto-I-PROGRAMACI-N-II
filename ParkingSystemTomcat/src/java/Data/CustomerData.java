@@ -275,4 +275,50 @@ public class CustomerData {
         }
         return customer;
     }
+    public boolean customerSearch(String username, String password) throws org.json.simple.parser.ParseException {
+        boolean founded = false;
+        LinkedList<Customer> customers = new LinkedList<>();
+        ArrayList<JSONObject> jsonArray = new ArrayList<>();
+        JSONObject jsonObject = null;
+        // This will reference one line at a time
+        String line = null;
+        Customer customer = new Customer();
+        try {
+            // FileReader reads text files in the default encoding.
+            FileReader fileReader = new FileReader(jsonFilePath);
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            while ((line = bufferedReader.readLine()) != null) {
+                jsonObject = (JSONObject) new JSONParser().parse(line);
+                jsonArray.add(jsonObject);
+                customer.setIdentification(jsonObject.get("identification").toString());
+                customer.setName(jsonObject.get("name").toString());
+                customer.setEmail(jsonObject.get("email").toString());
+                customer.setPhone(jsonObject.get("phone").toString());
+                customer.setUsername(jsonObject.get("username").toString());
+                customer.setPassword(jsonObject.get("password").toString());
+               customer.setDisabilityPresented(Boolean.parseBoolean(jsonObject.get("disabilityPresented").toString()));
+                System.out.println(customer.toString());
+                customers.add(customer);
+
+            }
+            for (int i = 0; i < customers.size(); i++) {
+                if (username.equalsIgnoreCase(jsonObject.get("username").toString())
+                        || password.equalsIgnoreCase(jsonObject.get("password").toString())) {
+                    founded = true;
+                }
+            }
+            System.out.println(customer.getUsername() + "" + customer.getPassword());
+            // Always close files.
+            bufferedReader.close();
+        } catch (FileNotFoundException ex) {
+            System.out.println("Unable to open file '" + jsonFilePath + "'");
+        } catch (IOException ex) {
+            System.out.println("Error reading file '" + jsonFilePath + "'");
+            // Or we could just do this:
+            // ex.printStackTrace();
+        }
+        return founded;
+    }//fin customerSearch
+    
 }

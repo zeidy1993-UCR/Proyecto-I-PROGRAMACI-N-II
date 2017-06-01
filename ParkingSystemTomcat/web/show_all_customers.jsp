@@ -8,9 +8,9 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
-<head>
- <title>Mostrar todos los Clientes</title>
- <style type="text/css">
+    <head>
+        <title>Mostrar todos los Clientes</title>
+        <style type="text/css">
 
             * {
                 margin:0px;
@@ -66,22 +66,27 @@
             }
 
         </style>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<!-- Save for Web Slices (jsp.psd) -->
-<center>
-<table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-        <td>
-            <a href="./main_menu_customer.jsp">
-                <img src="Images/JSP/jsp_01.jpg" width="164" height="105" alt=""></a></td>
-        <td>
-            <img src="Images/JSP/jsp_02.jpg" width="604" height="105" alt=""></td>
-    </tr>
-    <tr>
-        <td colspan="2">
-             <div id="header">
+       <script type="text/javascript">{ <a
+                                    href="CustomerManagementServlet.do?action=edit&customerUsername=
+                }
+//Detectamos si el usuario denegó el mensaje
+                else {</script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+        <!-- Save for Web Slices (jsp.psd) -->
+    <center>
+        <table id="Tabla_01" width="768" height="1024" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <a href="./main_menu_customer.jsp">
+                        <img src="Images/JSP/jsp_01.jpg" width="164" height="105" alt=""></a></td>
+                <td>
+                    <img src="Images/JSP/jsp_02.jpg" width="604" height="105" alt=""></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="header">
                         <ul class="nav">
                             <li><a href="./index.jsp">Inicio</a></li>
                             <li><a href="">Configuración</a>
@@ -110,10 +115,10 @@
                             <li><a href="">Horario</a></li>
                         </ul>
                     </div>
-            </td>
-    </tr>
-    <tr>
-        <td colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
             <center>
                 <table border="2">
                     <td bgcolor="white" ><font size="4" color="#00009C"><b>Identificación</b></font> </td>
@@ -136,22 +141,24 @@
                             <td><font size="3"><c:out value="${currentCustomer.disabilityPresented}"/></font></td>
                             <td><font size="3"><a
                                     href="CustomerManagementServlet.do?action=edit&customerUsername=<c:out
-                                        value="${currentCustomer.username}"/>">Modificar</a></font>
+                                        value="${currentCustomer.username}"/>" >Modificar</a></font>
                                 <font size="3"><a
                                     href="CustomerManagementServlet.do?action=delete&customerUsername=<c:out
                                         value="${currentCustomer.username}"/>">Eliminar</a></font></td>
                         </tr>
                     </c:forEach>
                 </table>
+
+
             </center>
             </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <img src="Images/JSP/jsp_05.jpg" width="768" height="157" alt=""></td>
-    </tr>
-</table>
-</center>
-<!-- End Save for Web Slices -->
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <img src="Images/JSP/jsp_05.jpg" width="768" height="157" alt=""></td>
+            </tr>
+        </table>
+    </center>
+    <!-- End Save for Web Slices -->
 </body>
 </html>

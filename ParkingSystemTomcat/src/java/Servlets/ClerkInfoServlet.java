@@ -64,10 +64,10 @@ public class ClerkInfoServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-String placeOfWork= request.getParameter("placeOfWork");
+        String placeOfWork = request.getParameter("placeOfWork");
         //here the insertion of Customer takes place
-        Clerk clerk= new Clerk(identification, name, email, phone, username, password, placeOfWork);
-        ClerkBusiness clerkBusiness= new ClerkBusiness();
+        Clerk clerk = new Clerk(identification, name, email, phone, username, password, placeOfWork);
+        ClerkBusiness clerkBusiness = new ClerkBusiness();
 
         try {
             clerkBusiness.insertClerk(clerk);
@@ -91,17 +91,19 @@ String placeOfWork= request.getParameter("placeOfWork");
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Clerk clerk= new Clerk();
-        ClerkBusiness clerkBusiness= new ClerkBusiness();
+        Clerk clerk = new Clerk();
+        ClerkBusiness clerkBusiness = new ClerkBusiness();
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        boolean condition = false;
 
         try {
-clerk= clerkBusiness.getClerkByUsernameAndPassword(username, password);
-            
+            clerk = clerkBusiness.getClerkByUsernameAndPassword(username, password);
+            condition= clerkBusiness.clerkSearch(username, password);
+
             System.out.println("name: " + clerk.getName());
             //verifica que se encontró el cliente y por ende, tiene un nombre
-            if (!clerk.getName().equals("") && clerk.getUsername().equals(username)) {
+            if (condition==true&&!clerk.getName().equals("") && clerk.getUsername().equals(username)) {
                 RequestDispatcher dispacher = request.getRequestDispatcher("main_menu_clerk.jsp");
                 response.setHeader("name", clerk.getName());
                 dispacher.forward(request, response);

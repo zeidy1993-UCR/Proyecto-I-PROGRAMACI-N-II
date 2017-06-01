@@ -58,16 +58,16 @@ public class AdministratorInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-String identification= request.getParameter("identification");
+        String identification = request.getParameter("identification");
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-       Administrator administrator = new Administrator(identification, name, email, phone, username, password);
+        Administrator administrator = new Administrator(identification, name, email, phone, username, password);
         AdministratorBusiness administratorBusiness = new AdministratorBusiness();
         try {
-           administratorBusiness.insertAdministrator(administrator);
+            administratorBusiness.insertAdministrator(administrator);
         } catch (ParseException ex) {
             Logger.getLogger(AdministratorInfoServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -90,23 +90,25 @@ String identification= request.getParameter("identification");
             throws ServletException, IOException {
         Administrator administrator = new Administrator();
         AdministratorBusiness administratorBusiness = new AdministratorBusiness();
+        boolean condition = false;
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-      
+        
+
         try {
 
             administrator = administratorBusiness.getAdministratorByUsernameAndPassword(username, password);
+            condition = administratorBusiness.administratorSearch(username, password);
             System.out.println("name: " + administrator.getName());
-                       if (!administrator.getName().equals("")&&administrator.getUsername().equals(username)) {
+            if (condition == true && !administrator.getName().equals("")&&!administrator.getPassword().equals("")) {
                 RequestDispatcher dispacher = request.getRequestDispatcher("main_menu_administrator.jsp");
                 response.setHeader("name", administrator.getName());
                 dispacher.forward(request, response);
-            }else  {
-                           RequestDispatcher dispacher = request.getRequestDispatcher("insert_administrator.jsp");
+            } else {
+                RequestDispatcher dispacher = request.getRequestDispatcher("insert_administrator.jsp");
                 dispacher.forward(request, response);
-                       }
-          
-            
+            }
+
         } catch (java.text.ParseException | ParseException ex) {
             Logger.getLogger(AdministratorInfoServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

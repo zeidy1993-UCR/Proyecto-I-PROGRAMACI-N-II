@@ -107,7 +107,7 @@
                                     <li><a href="">Consultar Parqueos</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Horario</a></li>
+                            <li><a href="ScheduleRetrievalServlet">Horario</a></li>
                         </ul>
                     </div>
             </td>

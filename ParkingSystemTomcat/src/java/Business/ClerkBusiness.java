@@ -70,5 +70,9 @@ public class ClerkBusiness {
         clerk = clerkData.getClerkByUsername(username);
         return clerk;
     }
+    
+    public boolean clerkSearch(String username, String password) throws org.json.simple.parser.ParseException {
+        return clerkData.clerkSearch(username, password);
+    }
 
 }

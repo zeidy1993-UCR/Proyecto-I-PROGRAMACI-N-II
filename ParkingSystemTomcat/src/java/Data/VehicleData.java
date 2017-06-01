@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -33,7 +34,7 @@ public class VehicleData {
     }
 
     public void insertVehicles(Vehicle vehicle) throws IOException, org.json.simple.parser.ParseException, ParseException {
-        Customer customer = new Customer();
+        Customer customer;
         CustomerBusiness customerBusiness = new CustomerBusiness();
         VehicleType vehicleType = new VehicleType();
         VehicleBusiness vehicleBusiness = new VehicleBusiness();
@@ -42,30 +43,30 @@ public class VehicleData {
         vehicleObject.put("plate", vehicle.getPlate());
         vehicleObject.put("brand", vehicle.getBrand());
 
-        Customer tempCustomer = vehicle.getCustomer()[0];
-        String firstCustomer = "Identificacion: " + tempCustomer.getIdentification() + " "
-                + "Nombre: " + tempCustomer.getName() + " - "
-                + "Email: " + tempCustomer.getEmail() + " - "
-                + "Numero: " + tempCustomer.getPhone() + " - "
-                + "Username: " + tempCustomer.getUsername() + " - "
-                + "Presenta Discapacidad: " + tempCustomer.isDisabilityPresented();
-        vehicleObject.put("firstCustomer", firstCustomer);
+        vehicleObject.put("firstCustomer", "[");
+//        JSONArray firstCustomer = new JSONArray();
+        vehicleObject.put("identificationFirst", vehicle.getCustomer()[0].getIdentification());
+        vehicleObject.put("nameFirst", vehicle.getCustomer()[0].getName());
+        vehicleObject.put("emailFirst", vehicle.getCustomer()[0].getEmail());
+        vehicleObject.put("phoneFirst", vehicle.getCustomer()[0].getPhone());
+        vehicleObject.put("usernameFirst", vehicle.getCustomer()[0].getUsername());
+        vehicleObject.put("disabiltyPresentedFirst", vehicle.getCustomer()[0].isDisabilityPresented());
+        vehicleObject.put("]", "]");
 
-        Customer tempSecondCustomer = vehicle.getCustomer()[1];
-        String secondCustomer = "Identificacion: " + tempSecondCustomer.getIdentification() + " "
-                + "Nombre: " + tempSecondCustomer.getName() + " - "
-                + "Email: " + tempSecondCustomer.getEmail() + " - "
-                + "Numero: " + tempSecondCustomer.getPhone() + " - "
-                + "Username: " + tempSecondCustomer.getUsername() + " - "
-                + "Presenta Discapacidad: " + tempSecondCustomer.isDisabilityPresented();
+        vehicleObject.put("secondCustomer", "[");
+//        JSONArray firstCustomer = new JSONArray();
+        vehicleObject.put("identificationSecond", vehicle.getCustomer()[1].getIdentification());
+        vehicleObject.put("nameSecond", vehicle.getCustomer()[1].getName());
+        vehicleObject.put("emailSecond", vehicle.getCustomer()[1].getEmail());
+        vehicleObject.put("phoneSecond", vehicle.getCustomer()[1].getPhone());
+        vehicleObject.put("usernameSecond", vehicle.getCustomer()[1].getUsername());
+        vehicleObject.put("disabiltyPresentedSecond", vehicle.getCustomer()[1].isDisabilityPresented());
+        vehicleObject.put("]", "]");
 
-        vehicleObject.put("secondCustomer", secondCustomer);
+        vehicleObject.put("id", vehicle.getVehicleType().getId());
+        vehicleObject.put("description", vehicle.getVehicleType().getDescription());
+        vehicleObject.put("fee", vehicle.getVehicleType().getFee());
 
-        String typeVehicles = "Id: " + vehicle.getVehicleType().getId() + " - "
-                + "Descripcion: " + vehicle.getVehicleType().getDescription() + " - "
-                + "Precio: " + vehicle.getVehicleType().getFee();
-
-        vehicleObject.put("vehicleType", typeVehicles);
         //true allows multiple insertions in the file
         try (FileWriter file = new FileWriter(jsonFilePath, true)) {
             file.write(vehicleObject.toJSONString() + "\r\n");
@@ -75,7 +76,6 @@ public class VehicleData {
 
     public LinkedList<Vehicle> getAllVehicles() throws ParseException, org.json.simple.parser.ParseException {
         LinkedList<Vehicle> vehicles = new LinkedList<>();
-        ArrayList<JSONObject> jsonArray = new ArrayList<>();
         JSONObject jsonObject;
         // This will reference one line at a time
         String line;
@@ -86,22 +86,48 @@ public class VehicleData {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             while ((line = bufferedReader.readLine()) != null) {
                 jsonObject = (JSONObject) new JSONParser().parse(line);
-                jsonArray.add(jsonObject);
                 Vehicle vehicle = new Vehicle();
+
                 String auxPlate = (String) jsonObject.get("plate");
                 vehicle.setPlate(auxPlate);
+
                 String auxBrand = (String) jsonObject.get("brand");
                 vehicle.setBrand(auxBrand);
-                Customer[] customer = new Customer[2];
-                customer[0] = (Customer) jsonObject.get("firstCustomer");
-                customer[1] = (Customer) jsonObject.get("secondCustomer");
-                vehicle.setCustomer(customer);
-                
-                vehicle.setVehicleType((VehicleType) jsonObject.get("vehicleType"));
 
-                System.out.println(vehicle.toString());
+                String identificationFirst = (String) jsonObject.get("identificationFirst");
+                String nameFirst = (String) jsonObject.get("nameFirst");
+                vehicle.setNameCustomer(nameFirst);
+                String emailFirst = (String) jsonObject.get("emailFirst");
+                String phoneFirst = (String) jsonObject.get("phoneFirst");
+               
+                String usernameFirst = (String) jsonObject.get("usernameFirst");
+                boolean disabiltyPresentedFirst = (boolean) jsonObject.get("disabiltyPresentedFirst");
+
+                String identificationSecond = (String) jsonObject.get("identificationSecond");
+                String nameSecond = (String) jsonObject.get("nameSecond");
+                String emailSecond = (String) jsonObject.get("emailSecond");
+                String phoneSecond = (String) jsonObject.get("phoneSecond");
+                String usernameSecond = (String) jsonObject.get("usernameSecond");
+                boolean disabiltyPresentedSecond = (boolean) jsonObject.get("disabiltyPresentedSecond");
+
+                Customer customers[] = new Customer[2];
+                customers[0] = new Customer(identificationFirst, nameFirst, emailFirst, phoneFirst,
+                        usernameFirst, "lll", disabiltyPresentedFirst);
+                customers[1] = new Customer(identificationSecond, nameSecond, emailSecond, phoneSecond,
+                        usernameSecond, "jievn", disabiltyPresentedSecond);
+
+                vehicle.setCustomer(customers);
+
+                String idVehicleType = (String) jsonObject.get("id");
+                vehicle.setIdVehicleType(idVehicleType);
+                String descriptionVehicleType = (String) jsonObject.get("description");
+                //float feeVehicleType = (float) jsonObject.get("fee");
+
+                vehicle.setVehicleType(new VehicleType(idVehicleType, descriptionVehicleType, (float) 1000.0));
+
                 vehicles.add(vehicle);
             }
+
             // Always close files.
             bufferedReader.close();
         } catch (FileNotFoundException ex) {
@@ -341,14 +367,14 @@ public class VehicleData {
     public float fee(String id) {
         float fee = 0;
         if (id.equalsIgnoreCase("motocicleta")) {
-            fee = 500;
+            fee = (float) 500.0;
         } else if (id.equalsIgnoreCase("automovil")) {
-            fee = 1000;
+            fee = (float) 1000.0;
         } else if (id.equalsIgnoreCase("microbus")) {
-            fee = 1500;
+            fee = (float) 1500.0;
         }
 
-        return fee;
+        return (float) fee;
     }
 
 }

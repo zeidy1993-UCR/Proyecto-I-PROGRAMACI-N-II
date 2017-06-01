@@ -93,17 +93,24 @@ public class CustomerInfoServlet extends HttpServlet {
             throws ServletException, IOException {
         Customer customer = new Customer();
         CustomerBusiness customerBusiness = new CustomerBusiness();
+        boolean condition=false;
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         try {
             customer = customerBusiness.getCustomerByUsernameAndPassword(username, password);
+            condition= customerBusiness.customerSearch(username, password);
             System.out.println("name: " + customer.getName());
             //verifica que se encontró el cliente y por ende, tiene un nombre
-            if (!customer.getName().equals("")) {
+            if (condition==true&&!customer.getName().equals("")) {
                 RequestDispatcher dispacher = request.getRequestDispatcher("main_menu_customer.jsp");
                 response.setHeader("name", customer.getName());
+                response.setHeader("identification", customer.getIdentification());
                 dispacher.forward(request, response);
+            }else{
+                  RequestDispatcher dispacher = request.getRequestDispatcher("insert_customer.jsp");
+                  dispacher.forward(request, response);
             }
+                
         } catch (java.text.ParseException ex) {
             Logger.getLogger(CustomerInfoServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {

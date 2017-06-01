@@ -70,5 +70,7 @@ public class AdministratorBusiness {
         administrator = administratorData.getAdministratorByUsername(username);
         return administrator;
     }
-
+ public boolean administratorSearch(String username, String password) throws org.json.simple.parser.ParseException {
+     return administratorData.administratorSearch(username, password);
+ }
 }

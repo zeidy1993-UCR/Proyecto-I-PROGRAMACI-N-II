@@ -93,10 +93,17 @@
                                     </li>
                                     <li><a href="">Editar Perfil</a>
 
-                                        <ul>
-                                            <li><a href="">Consultar</a></li>
+                                          <ul>
+                                            <li><a href="./insert_customer.jsp">Insertar</a></li>
+                                            <li><a href="CustomerRetrievalServlet">Consultar</a>
+                                                <ul>
+                                                    <li><a href="CustomerRetrievalServlet">Modificar</a></li>
+                                                    <li><a href="CustomerRetrievalServlet">Eliminar</a></li>
+                                                </ul>
+                                            <li><a href="./insert_vehicle.jsp">Insertar Vehiculo</a></li>
+                                            <li><a href="VehicleRetrievalServlet">Consultar Vehiculo</a>
+                                            <li>
                                         </ul>
-
                                     </li>
 
                                 </ul>
@@ -106,7 +113,7 @@
                                     <li><a href="">Consultar Parqueos</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Horario</a></li>
+                            <li><a href="ScheduleRetrievalServlet">Horario</a></li>
                         </ul>
                     </div>
             </td>

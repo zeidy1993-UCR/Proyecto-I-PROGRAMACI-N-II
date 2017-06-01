@@ -3,8 +3,14 @@ package Data;
 import Domain.ParkingLot;
 import Domain.Space;
 import Domain.Vehicle;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 /**
  *
@@ -14,23 +20,39 @@ public class ParkingLotData {
 
     static LinkedList<ParkingLot> parkingLots;
     static int parkingLotId = 1;
+    final String jsonFilePath;
 
     public ParkingLotData() {
-
+        this.jsonFilePath
+                = "C:\\Users\\Usuario\\Documents\\Progra2\\ProyectoProgra1\\Protecto I PROGRAMACION II TOMCAT\\Proyecto I PROGRAMACIÓN II\\ParkingSystemTomcat\\vehicles.json";
         parkingLots = new LinkedList<>();
     }
 
-    public ParkingLot registerParkingLot(String nameOfParkingLot, Space spaces[]) {
+    public void registerParkingLot(String nameOfParkingLot, Space spaces[]) {
 
-        ParkingLot parkingLot = new ParkingLot();
-        parkingLot.setId(parkingLotId);
-        parkingLotId++;
-        parkingLot.setName(nameOfParkingLot);
-        parkingLot.setSpaces(spaces);
+        JSONObject parkingObject = new JSONObject();
+        parkingObject.put("nameOfParkingLot", nameOfParkingLot);
 
-        parkingLots.add(parkingLot);
+        
+        for (int i = 0; i < spaces.length; i++) {
+        parkingObject.put("id"+i+": " , spaces[i].getId());
+        parkingObject.put("disabilityAdaptation"+i+": " , spaces[i].isDisabilityAdaptation());
+        parkingObject.put("spaceTaken"+i+": " , spaces[i].isSpaceTaken());
+        
+        parkingObject.put("id"+i+": " , spaces[i].getVehicleType().getId());
+        parkingObject.put("description"+i+": " , spaces[i].getVehicleType().getDescription());
+        parkingObject.put("fee"+i+": " , spaces[i].getVehicleType().getFee());
+        
+        
+        }
 
-        return parkingLot;
+        //true allows multiple insertions in the file
+        try (FileWriter file = new FileWriter(jsonFilePath, true)) {
+            file.write(parkingObject.toJSONString() + "\r\n");
+
+        } catch (IOException ex) {
+            Logger.getLogger(ParkingLotData.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 
@@ -53,36 +75,39 @@ public class ParkingLotData {
 
                 //preguntamos si el cliente presenta una capacidad particular
                 //y requiere de un espacio adaptado
-                if (vehicle.getCustomer()[i].isDisabilityPresented()) {
+                for (int j = 0; j < vehicle.getCustomer().length; j++) {
 
-                    if (spaces[i].isDisabilityAdaptation()) {
+                    if (vehicle.getCustomer()[j].isDisabilityPresented()) {
 
-                        //compara el tipo de vehículo del espacio y del vehículo que se va a 
-                        //estacionar (tipos: moto, automóvil, bus, etc)
-                        if (spaces[i].getVehicleType().getId() == vehicle.getVehicleType().getId()) {
-                            vehiclesInParkingLot.add(vehicle);
-                            spaces[i].setSpaceTaken(true);
-                            //este es el número del espacio que se va a retornar
-                            spaceId = spaces[i].getId();
-                            break;
+                        if (spaces[i].isDisabilityAdaptation()) {
+
+                            //compara el tipo de vehículo del espacio y del vehículo que se va a 
+                            //estacionar (tipos: moto, automóvil, bus, etc)
+                            if (spaces[i].getVehicleType().getId() == vehicle.getVehicleType().getId()) {
+                                vehiclesInParkingLot.add(vehicle);
+                                spaces[i].setSpaceTaken(true);
+                                //este es el número del espacio que se va a retornar
+                                spaceId = spaces[i].getId();
+                                break;
+                            }
+
                         }
 
-                    }
+                    } else {
 
-                } else {
+                        if (!spaces[i].isDisabilityAdaptation()) {
+                            //compara el tipo de vehículo del espacio y del vehículo que se va a 
+                            //estacionar (tipos: moto, automóvil, bus, etc)
+                            if (spaces[i].getVehicleType().getId() == vehicle.getVehicleType().getId()) {
 
-                    if (!spaces[i].isDisabilityAdaptation()) {
-                        //compara el tipo de vehículo del espacio y del vehículo que se va a 
-                        //estacionar (tipos: moto, automóvil, bus, etc)
-                        if (spaces[i].getVehicleType().getId() == vehicle.getVehicleType().getId()) {
+                                vehiclesInParkingLot.add(vehicle);
+                                spaces[i].setSpaceTaken(true);
+                                //este es el número del espacio que se va a retornar
+                                spaceId = spaces[i].getId();
+                                break;
+                            }
 
-                            vehiclesInParkingLot.add(vehicle);
-                            spaces[i].setSpaceTaken(true);
-                            //este es el número del espacio que se va a retornar
-                            spaceId = spaces[i].getId();
-                            break;
                         }
-
                     }
                 }
 
