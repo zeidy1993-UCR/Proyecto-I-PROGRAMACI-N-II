@@ -139,7 +139,7 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            <li><a href="">Reportes</a></li>
+                            <li><a href="./GraphicReservation.jsp">Reportes</a></li>
                     </div>
                 </td>
             </tr>

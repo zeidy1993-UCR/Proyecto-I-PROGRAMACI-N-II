@@ -110,7 +110,7 @@
 
                                 </ul>
                             </li>
-                            <li><a href=""> Parqueos</a>
+                            <li><a href="./GraphicReservation.jsp"> Parqueos</a>
                                 <ul>
                                     <li><a href="">Insertar</a></li>
                                     <li><a href="">Consultar</a>

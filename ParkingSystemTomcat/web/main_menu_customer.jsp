@@ -108,7 +108,7 @@
 
                                 </ul>
                             </li>
-                            <li><a href="">Parqueos</a>
+                            <li><a href="./GraphicReservation.jsp">Parqueos</a>
                                 <ul>
                                     <li><a href="">Consultar Parqueos</a></li>
                                 </ul>

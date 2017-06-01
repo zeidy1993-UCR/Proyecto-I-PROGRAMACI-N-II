@@ -89,7 +89,7 @@
                             <li><a href="">Parqueos</a>
                                 <ul>
 
-                                    <li><a href="">Consultar</a>
+                                    <li><a href="./GraphicReservation.jsp">Consultar</a>
                                     </li>
                                 </ul>
                             </li>

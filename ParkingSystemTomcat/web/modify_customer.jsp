@@ -109,7 +109,7 @@
 
                                 </ul>
                             </li>
-                            <li><a href="">Parqueos</a>
+                            <li><a href="./GraphicReservation.jsp">Parqueos</a>
                                 <ul>
                                     <li><a href="">Consultar Parqueos</a></li>
                                 </ul>
@@ -159,11 +159,7 @@
                             <td>
                                 <form action="">
                                     <font color="15377d"><input type="radio"  name="disabilityPresented" value="true"> Sí<br></font>
-                                    <font color="15377d"><input type="radio"  name="disabilityPresented" value="${customer.disabilityPresented}"> No<br></font>
-
-                          <!--                   <font color="15377d"><input type="radio"  name="disabilityPresented" checked="${customer.disabilityPresented}" value="true"> Sí<br></font>
-                            <font color="15377d"><input type="radio"  name="disabilityPresented" checked="${customer.disabilityPresented}" value="false"> No<br></font>
-                                    -->
+                                    <font color="15377d"><input type="radio"  name="disabilityPresented" value="false"> No<br></font>
                                 </form></td>
                         </tr>
                     </table>

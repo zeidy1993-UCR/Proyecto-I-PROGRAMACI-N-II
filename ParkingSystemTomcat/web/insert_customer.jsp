@@ -111,7 +111,7 @@
                             </li>
                             <li><a href="">Parqueos</a>
                                 <ul>
-                                    <li><a href="">Consultar Parqueos</a></li>
+                                    <li><a href="./GraphicReservation.jsp">Consultar Parqueos</a></li>
                                 </ul>
                             </li>
                             <li><a href="ScheduleRetrievalServlet">Horario</a></li>
