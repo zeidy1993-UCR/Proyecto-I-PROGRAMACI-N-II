@@ -102,7 +102,6 @@ public class AdministratorInfoServlet extends HttpServlet {
             System.out.println("name: " + administrator.getName());
             if (condition == true && !administrator.getName().equals("")&&!administrator.getPassword().equals("")) {
                 RequestDispatcher dispacher = request.getRequestDispatcher("main_menu_administrator.jsp");
-                response.setHeader("name", administrator.getName());
                 dispacher.forward(request, response);
             } else {
                 RequestDispatcher dispacher = request.getRequestDispatcher("insert_administrator.jsp");
