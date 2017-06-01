@@ -88,8 +88,8 @@
                                             <li><a href="./insert_administrator.jsp">Insertar</a></li>
                                             <li><a href="AdministratorRetrievalServlet">Consultar</a>
                                                 <ul>
-                                                    <li><a href="">Modificar</a></li>
-                                                    <li><a href="">Eliminar</a></li>
+                                                    <li><a href="AdministratorRetrievalServlet">Modificar</a></li>
+                                                    <li><a href="AdministratorRetrievalServlet">Eliminar</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

@@ -85,13 +85,13 @@
                         <ul class="nav">
                             <li><a href="">Configuración</a>
                                 <ul>
-                                    <li><a href="">Administradores</a>
+                                    <li><a href="./main_menu_administrator.jsp">Administradores</a>
                                         <ul>
                                             <li><a href="./insert_administrator.jsp">Insertar</a></li>
                                             <li><a href="AdministratorRetrievalServlet">Consultar</a>
                                                 <ul>
-                                                    <li><a href="">Modificar</a></li>
-                                                    <li><a href="">Eliminar</a></li>
+                                                    <li><a href="AdministratorRetrievalServlet">Modificar</a></li>
+                                                    <li><a href="AdministratorRetrievalServlet">Eliminar</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

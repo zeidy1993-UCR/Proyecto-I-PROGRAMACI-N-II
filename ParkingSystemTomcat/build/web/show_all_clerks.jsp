@@ -97,11 +97,11 @@
                                     </li>
                                     <li><a href="">Vehiculos</a>
                                         <ul>
-                                            <li><a href="">Insertar</a></li>
-                                            <li><a href="">Consultar</a>
+                                            <li><a href="./insert_vehicle.jsp">Insertar</a></li>
+                                            <li><a href="VehicleRetrievalServlet">Consultar</a>
                                                 <ul>
-                                                    <li><a href="">Modificar</a></li>
-                                                    <li><a href="">Eliminar</a></li>
+                                                    <li><a href="VehicleRetrievalServlet">Modificar</a></li>
+                                                    <li><a href="VehicleRetrievalServlet">Eliminar</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
